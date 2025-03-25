@@ -5,11 +5,15 @@ const Container = styled.div`
   display: flex;
 `;
 
+const H1Estilizado = styled.h1`
+  color: #fff0d1;
+`;
+
 const Logomarca = () => {
   return (
     <Container>
       <img src={imagemPatas} />
-      <h1>PetMatch</h1>
+      <H1Estilizado>PetMatch</H1Estilizado>
     </Container>
   );
 };

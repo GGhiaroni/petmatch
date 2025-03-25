@@ -9,3 +9,10 @@ body {
   background-color: #f5f5f5;
   line-height: 1.6;
 }
+
+:root{
+  --corTextoPrincipal: #111827,
+  --corIconesBotoes: #3C83F6,
+  --corTexto: #858C96
+}
+
