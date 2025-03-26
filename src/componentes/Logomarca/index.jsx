@@ -8,7 +8,6 @@ const Container = styled.div`
     max-width: 50px;
   }
   align-items: center;
-  padding: 1rem 2.5rem;
 `;
 
 const H1Estilizado = styled.h1`

@@ -1,7 +1,8 @@
-:root{
-  --corTextoPrincipal: #111827,
-  --corIconesBotoes: #3C83F6,
-  --corTexto: #858C96
+:root {
+  --corTextoPrincipal: #111827;
+  --corIconesBotoes: #226add;
+  --corHoverIconesBotoes: #307af0;
+  --corTexto: #4e5157;
 }
 
 * {
@@ -9,10 +10,32 @@
   padding: 0;
   box-sizing: border-box;
 }
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
 
 body {
   font-family: "Mulish", sans-serif;
   line-height: 1.6;
-  background: linear-gradient(0deg, #FFFFFF, #D9EBFF), linear-gradient(180deg, #FFFFFF, #D9EBFF);
+  background: linear-gradient(0deg, #ffffff, #d9ebff),
+    linear-gradient(180deg, #ffffff, #d9ebff);
   min-height: 100vh;
 }
