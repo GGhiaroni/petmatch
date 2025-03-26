@@ -1,12 +1,19 @@
 import styled from "styled-components";
-import imagemPatas from "/src/assets/logo-white.png";
+import imagemPatas from "/src/assets/logo.png";
 
 const Container = styled.div`
   display: flex;
+  gap: 5px;
+  img {
+    max-width: 50px;
+  }
+  align-items: center;
+  padding: 1rem 2.5rem;
 `;
 
 const H1Estilizado = styled.h1`
-  color: #fff0d1;
+  color: var(--corTextoPrincipal);
+  font-size: 1.5rem;
 `;
 
 const Logomarca = () => {

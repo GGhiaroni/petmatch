@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Logomarca from "../Logomarca";
 
 const HeaderEstilizado = styled.header`
-  background-color: #3b3030;
+  background-color: #ffffff;
 `;
 
 const Header = () => {
