@@ -1,6 +1,7 @@
 import { AiOutlineMessage } from "react-icons/ai";
 import { CiSearch } from "react-icons/ci";
 import styled from "styled-components";
+import HeroSectionIcones from "../HeroSectionIcones";
 
 const HeroSectionContainer = styled.section`
   margin: 10rem auto;
@@ -68,6 +69,7 @@ const HeroSection = () => {
           Falar com abrigo
         </BtnContato>
       </ContainerBotoes>
+      <HeroSectionIcones />
     </HeroSectionContainer>
   );
 };
