@@ -1,3 +1,5 @@
+import { AiOutlineMessage } from "react-icons/ai";
+import { CiSearch } from "react-icons/ci";
 import styled from "styled-components";
 
 const HeroSectionContainer = styled.section`
@@ -26,18 +28,26 @@ const ContainerBotoes = styled.div`
 
 const BtnEncontrar = styled.button`
   background-color: var(--corIconesBotoes);
-  padding: 10px 30px;
-  border-radius: 8px;
+  padding: 12px 35px;
+  border-radius: 15px;
   font-size: 1.1rem;
   color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid #add8e6;
 `;
 
 const BtnContato = styled.button`
   background-color: #ffffff;
   padding: 10px 30px;
-  border-radius: 8px;
+  border-radius: 15px;
   font-size: 1.1rem;
   color: var(--corTexto);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid #dfe1e4;
 `;
 
 const HeroSection = () => {
@@ -49,8 +59,14 @@ const HeroSection = () => {
         como você.
       </SpanEstilizado>
       <ContainerBotoes>
-        <BtnEncontrar>Encontrar um amigo</BtnEncontrar>
-        <BtnContato>Falar com abrigo</BtnContato>
+        <BtnEncontrar>
+          <CiSearch />
+          Encontrar um amigo
+        </BtnEncontrar>
+        <BtnContato>
+          <AiOutlineMessage />
+          Falar com abrigo
+        </BtnContato>
       </ContainerBotoes>
     </HeroSectionContainer>
   );
