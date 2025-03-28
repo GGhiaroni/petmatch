@@ -41,7 +41,6 @@ const BtnContato = styled.button`
 `;
 
 const HeroSection = () => {
-  console.log("hero section");
   return (
     <HeroSectionContainer>
       <H1Estilizado>Encontre seu novo melhor amigo</H1Estilizado>
