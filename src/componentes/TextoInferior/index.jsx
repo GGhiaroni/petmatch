@@ -1,9 +1,12 @@
+import { HiArrowLongRight } from "react-icons/hi2";
 import styled from "styled-components";
+import Botao from "../Botao";
 
 const TextoInferiorContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 7rem;
+  margin-bottom: 6rem;
   gap: 1.5rem;
   align-items: center;
 `;
@@ -25,6 +28,9 @@ const TextoInferior = () => {
       <TextoDescricao>
         Comece sua jornada de adoção hoje e mude duas vidas para sempre.
       </TextoDescricao>
+      <Botao>
+        Encontrar cachorros disponíveis <HiArrowLongRight />
+      </Botao>
     </TextoInferiorContainer>
   );
 };

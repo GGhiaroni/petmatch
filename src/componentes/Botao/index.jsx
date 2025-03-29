@@ -10,10 +10,14 @@ const BotaoEstilizado = styled.button`
   align-items: center;
   gap: 15px;
   border: 1px solid #add8e6;
+
+  :hover {
+    background-color: var(--corHoverIconesBotoes);
+  }
 `;
 
-const Botao = ({ children }) => {
-  return <BotaoEstilizado>{children}</BotaoEstilizado>;
+const Botao = ({ children, className }) => {
+  return <BotaoEstilizado className={className}>{children}</BotaoEstilizado>;
 };
 
 export default Botao;
