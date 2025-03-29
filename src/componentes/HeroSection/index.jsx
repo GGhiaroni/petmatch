@@ -1,6 +1,7 @@
 import { AiOutlineMessage } from "react-icons/ai";
 import { CiSearch } from "react-icons/ci";
 import styled from "styled-components";
+import Botao from "../Botao";
 import HeroSectionIcones from "../HeroSectionIcones";
 
 const HeroSectionContainer = styled.section`
@@ -27,18 +28,6 @@ const ContainerBotoes = styled.div`
   margin-top: 3rem;
 `;
 
-const BtnEncontrar = styled.button`
-  background-color: var(--corIconesBotoes);
-  padding: 12px 35px;
-  border-radius: 15px;
-  font-size: 1.1rem;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  border: 1px solid #add8e6;
-`;
-
 const BtnContato = styled.button`
   background-color: #ffffff;
   padding: 10px 30px;
@@ -60,10 +49,10 @@ const HeroSection = () => {
         como você.
       </SpanEstilizado>
       <ContainerBotoes>
-        <BtnEncontrar>
+        <Botao>
           <CiSearch />
           Encontrar um amigo
-        </BtnEncontrar>
+        </Botao>
         <BtnContato>
           <AiOutlineMessage />
           Falar com abrigo
