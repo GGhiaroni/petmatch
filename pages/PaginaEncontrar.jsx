@@ -1,4 +1,4 @@
-import { CiSearch } from "react-icons/ci";
+import { CiFilter, CiSearch } from "react-icons/ci";
 import styled from "styled-components";
 
 const ContainerPrincipal = styled.div`
@@ -10,12 +10,13 @@ const ContainerPrincipal = styled.div`
 const TextoPrincipal = styled.h1`
   font-size: 2.5rem;
   text-align: center;
+  padding-top: 9rem;
 `;
 
 const ContainerTopo = styled.div`
-  padding-top: 9rem;
+  padding-top: 2rem;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 2.5rem;
 `;
@@ -46,8 +47,8 @@ const InputEstilizado = styled.input`
 const PaginaEncontrar = () => {
   return (
     <ContainerPrincipal>
+      <TextoPrincipal>Encontre seu novo amigo</TextoPrincipal>
       <ContainerTopo>
-        <TextoPrincipal>Encontre seu novo amigo</TextoPrincipal>
         <ContainerInput>
           <CiSearch size={20} color="#d4d8dE" />
           <InputEstilizado
@@ -56,6 +57,7 @@ const PaginaEncontrar = () => {
             color=""
           />
         </ContainerInput>
+        <CiFilter />
       </ContainerTopo>
     </ContainerPrincipal>
   );
