@@ -44,20 +44,30 @@ const InputEstilizado = styled.input`
   }
 `;
 
+const ButtonIcone = styled.button`
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px 15px;
+  border: 1px solid #d4d8de;
+`;
+
 const PaginaEncontrar = () => {
   return (
     <ContainerPrincipal>
       <TextoPrincipal>Encontre seu novo amigo</TextoPrincipal>
       <ContainerTopo>
         <ContainerInput>
-          <CiSearch size={20} color="#d4d8dE" />
+          <CiSearch size={20} />
           <InputEstilizado
             type="text"
             placeholder="Buscar por raça ou porte..."
             color=""
           />
         </ContainerInput>
-        <CiFilter />
+        <ButtonIcone>
+          <CiFilter size={20} />
+        </ButtonIcone>
       </ContainerTopo>
     </ContainerPrincipal>
   );
