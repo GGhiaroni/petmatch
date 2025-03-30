@@ -1,5 +1,6 @@
 import { AiOutlineMessage } from "react-icons/ai";
 import { CiSearch } from "react-icons/ci";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Botao from "../Botao";
 import HeroSectionIcones from "../HeroSectionIcones";
@@ -49,10 +50,12 @@ const HeroSection = () => {
         como você.
       </SpanEstilizado>
       <ContainerBotoes>
-        <Botao>
-          <CiSearch />
-          Encontrar um amigo
-        </Botao>
+        <Link to={"/encontrar"}>
+          <Botao>
+            <CiSearch />
+            Encontrar um amigo
+          </Botao>
+        </Link>
         <BtnContato>
           <AiOutlineMessage />
           Falar com abrigo
