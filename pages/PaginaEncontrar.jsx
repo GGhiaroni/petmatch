@@ -1,5 +1,7 @@
+import { useEffect, useState } from "react";
 import { CiFilter, CiSearch } from "react-icons/ci";
 import styled from "styled-components";
+import listaInicialCachorros from "../src/db/dogs.json";
 
 const ContainerPrincipal = styled.div`
   background: #ffffff;
@@ -53,6 +55,12 @@ const ButtonIcone = styled.button`
 `;
 
 const PaginaEncontrar = () => {
+  const [cachorros, setCachorros] = useState([]);
+
+  useEffect(() => {
+    setCachorros(listaInicialCachorros.dogs);
+  }, []);
+
   return (
     <ContainerPrincipal>
       <TextoPrincipal>Encontre seu novo amigo</TextoPrincipal>
@@ -69,6 +77,12 @@ const PaginaEncontrar = () => {
           <CiFilter size={20} />
         </ButtonIcone>
       </ContainerTopo>
+      {cachorros.map((cachorro, index) => (
+        <>
+          <p key={index}>{cachorro.nome}</p>
+          <img src={cachorro.foto} />
+        </>
+      ))}
     </ContainerPrincipal>
   );
 };
