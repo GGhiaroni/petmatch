@@ -37,6 +37,7 @@ const LiEstilizado = styled.li`
   flex-direction: row;
   align-items: center;
   gap: 0.5rem;
+  cursor: pointer;
 
   img {
     max-width: 18px;
