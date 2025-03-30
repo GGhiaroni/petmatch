@@ -1,0 +1,124 @@
+{
+  "dogs": [
+    {
+      "id": 1,
+      "nome": "Bolt",
+      "idade": 2,
+      "peso": 8,
+      "raca": "Poodle Toy",
+      "porte": "Pequeno"
+    },
+    {
+      "id": 2,
+      "nome": "Luna",
+      "idade": 3,
+      "peso": 7,
+      "raca": "Shih Tzu",
+      "porte": "Pequeno"
+    },
+    {
+      "id": 3,
+      "nome": "Max",
+      "idade": 1,
+      "peso": 6,
+      "raca": "Chihuahua",
+      "porte": "Pequeno"
+    },
+    {
+      "id": 4,
+      "nome": "Bella",
+      "idade": 4,
+      "peso": 9,
+      "raca": "Dachshund",
+      "porte": "Pequeno"
+    },
+    {
+      "id": 5,
+      "nome": "Charlie",
+      "idade": 2,
+      "peso": 10,
+      "raca": "Yorkshire Terrier",
+      "porte": "Pequeno"
+    },
+    {
+      "id": 6,
+      "nome": "Rocky",
+      "idade": 3,
+      "peso": 12,
+      "raca": "Beagle",
+      "porte": "Médio"
+    },
+    {
+      "id": 7,
+      "nome": "Duke",
+      "idade": 5,
+      "peso": 15,
+      "raca": "Cocker Spaniel",
+      "porte": "Médio"
+    },
+    {
+      "id": 8,
+      "nome": "Maggie",
+      "idade": 2,
+      "peso": 16,
+      "raca": "Border Collie",
+      "porte": "Médio"
+    },
+    {
+      "id": 9,
+      "nome": "Toby",
+      "idade": 4,
+      "peso": 18,
+      "raca": "Bulldog Francês",
+      "porte": "Médio"
+    },
+    {
+      "id": 10,
+      "nome": "Lucy",
+      "idade": 3,
+      "peso": 14,
+      "raca": "Pastor Australiano",
+      "porte": "Médio"
+    },
+    {
+      "id": 11,
+      "nome": "Zeus",
+      "idade": 6,
+      "peso": 30,
+      "raca": "Golden Retriever",
+      "porte": "Grande"
+    },
+    {
+      "id": 12,
+      "nome": "Brutus",
+      "idade": 4,
+      "peso": 40,
+      "raca": "Rottweiler",
+      "porte": "Grande"
+    },
+    {
+      "id": 13,
+      "nome": "Thor",
+      "idade": 5,
+      "peso": 35,
+      "raca": "Husky Siberiano",
+      "porte": "Grande"
+    },
+    {
+      "id": 14,
+      "nome": "Athena",
+      "idade": 3,
+      "peso": 32,
+      "raca": "Labrador Retriever",
+      "porte": "Grande"
+    },
+    {
+      "id": 15,
+      "nome": "Apolo",
+      "idade": 2,
+      "peso": 38,
+      "raca": "Pastor Alemão",
+      "porte": "Grande"
+    }
+  ]
+}
