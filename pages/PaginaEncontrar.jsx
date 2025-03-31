@@ -59,24 +59,36 @@ const ContainerCardsCachorros = styled.div`
   display: grid;
   grid-template-columns: repeat(3, minmax(200px, 1fr));
   gap: 20px;
-  padding: 10px;
+  padding: 30px;
+  margin-top: 20px;
 `;
 
 const CardCachorro = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #f8f8f8;
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid #d4d8de;
 `;
 
 const ImgCachorro = styled.img`
   width: 100%;
-  max-width: 250px;
   height: auto;
-  border-radius: 10px;
+  border-radius: 15px;
 `;
+
+const TextoCardCachorro = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const NomeCachorro = styled.h4`
+  font-size: 1.4rem;
+  display: flex;
+`;
+
+const DadosCachorro = styled.span``;
 
 const PaginaEncontrar = () => {
   const [cachorros, setCachorros] = useState([]);
@@ -109,6 +121,17 @@ const PaginaEncontrar = () => {
               key={index}
               alt={`Cachorro ${cachorro.nome}`}
             />
+            <TextoCardCachorro>
+              <NomeCachorro>{cachorro.nome}</NomeCachorro>
+              <DadosCachorro>Raça: {cachorro.raca}</DadosCachorro>
+              <p>
+                Idade:{" "}
+                {Number(cachorro.idade) === 1
+                  ? `${cachorro.idade} ano`
+                  : `${cachorro.idade} anos`}
+              </p>
+              <p>Porte: {cachorro.porte}</p>
+            </TextoCardCachorro>
           </CardCachorro>
         ))}
       </ContainerCardsCachorros>
