@@ -7,6 +7,7 @@ const ContainerPrincipal = styled.div`
   background: #ffffff;
   min-height: 100vh;
   width: 100%;
+  overflow-x: hidden;
 `;
 
 const TextoPrincipal = styled.h1`
@@ -54,6 +55,29 @@ const ButtonIcone = styled.button`
   border: 1px solid #d4d8de;
 `;
 
+const ContainerCardsCachorros = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 10px;
+`;
+
+const CardCachorro = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f8f8f8;
+  border-radius: 10px;
+  padding: 10px;
+`;
+
+const ImgCachorro = styled.img`
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 10px;
+`;
+
 const PaginaEncontrar = () => {
   const [cachorros, setCachorros] = useState([]);
 
@@ -77,12 +101,17 @@ const PaginaEncontrar = () => {
           <CiFilter size={20} />
         </ButtonIcone>
       </ContainerTopo>
-      {cachorros.map((cachorro, index) => (
-        <>
-          <p key={index}>{cachorro.nome}</p>
-          <img src={cachorro.foto} />
-        </>
-      ))}
+      <ContainerCardsCachorros>
+        {cachorros.map((cachorro, index) => (
+          <CardCachorro>
+            <ImgCachorro
+              src={cachorro.foto}
+              key={index}
+              alt={`Cachorro ${cachorro.nome}`}
+            />
+          </CardCachorro>
+        ))}
+      </ContainerCardsCachorros>
     </ContainerPrincipal>
   );
 };
