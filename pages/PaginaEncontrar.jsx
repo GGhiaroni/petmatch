@@ -66,29 +66,56 @@ const ContainerCardsCachorros = styled.div`
 const CardCachorro = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   border-radius: 15px;
   border: 1px solid #d4d8de;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 20px;
 `;
 
 const ImgCachorro = styled.img`
   width: 100%;
-  height: auto;
-  border-radius: 15px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
 `;
 
 const TextoCardCachorro = styled.div`
+  width: 100%;
+  padding: 25px 30px;
   display: flex;
   flex-direction: column;
 `;
 
 const NomeCachorro = styled.h4`
-  font-size: 1.4rem;
-  display: flex;
+  font-size: 1.6rem;
+  margin-bottom: 5px;
 `;
 
-const DadosCachorro = styled.span``;
+const DadosCachorro = styled.span`
+  font-size: 1rem;
+  color: #6b7280;
+`;
+
+const BotaoEstilizado = styled.button`
+  background-color: #2f7fff;
+  padding: 12px 35px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  color: #fffffff5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  border: 1px solid #add8e6;
+  width: 380px;
+
+  :hover {
+    background-color: var(--corHoverIconesBotoes);
+  }
+`;
 
 const PaginaEncontrar = () => {
   const [cachorros, setCachorros] = useState([]);
@@ -124,14 +151,15 @@ const PaginaEncontrar = () => {
             <TextoCardCachorro>
               <NomeCachorro>{cachorro.nome}</NomeCachorro>
               <DadosCachorro>Raça: {cachorro.raca}</DadosCachorro>
-              <p>
+              <DadosCachorro>
                 Idade:{" "}
                 {Number(cachorro.idade) === 1
                   ? `${cachorro.idade} ano`
                   : `${cachorro.idade} anos`}
-              </p>
-              <p>Porte: {cachorro.porte}</p>
+              </DadosCachorro>
+              <DadosCachorro>Porte: {cachorro.porte}</DadosCachorro>
             </TextoCardCachorro>
+            <BotaoEstilizado>Ver detalhes</BotaoEstilizado>
           </CardCachorro>
         ))}
       </ContainerCardsCachorros>
