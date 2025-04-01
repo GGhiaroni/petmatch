@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { CiFilter, CiSearch } from "react-icons/ci";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import listaInicialCachorros from "../src/db/dogs.json";
 
@@ -73,7 +74,6 @@ const CardCachorro = styled.div`
   width: 100%;
   overflow: hidden;
   padding-bottom: 20px;
-  cursor: pointer;
 `;
 
 const ImgCachorro = styled.img`
@@ -81,6 +81,7 @@ const ImgCachorro = styled.img`
   height: 200px;
   object-fit: cover;
   border-radius: 15px 15px 0 0;
+  cursor: pointer;
   &:hover {
     transform: scale(1.1);
     transition: transform 0.3s ease-in-out;
@@ -116,7 +117,7 @@ const BotaoEstilizado = styled.button`
   gap: 15px;
   border: 1px solid #add8e6;
   width: 380px;
-
+  cursor: pointer;
   :hover {
     background-color: var(--corHoverIconesBotoes);
   }
@@ -172,7 +173,13 @@ const PaginaEncontrar = () => {
               </DadosCachorro>
               <DadosCachorro>Porte: {cachorro.porte}</DadosCachorro>
             </TextoCardCachorro>
-            <BotaoEstilizado>Ver detalhes</BotaoEstilizado>
+            <Link
+              to={`/cachorros/porte-${cachorro.porte
+                .toLowerCase()
+                .replace("é", "e")}/${cachorro.id}`}
+            >
+              <BotaoEstilizado>Ver detalhes</BotaoEstilizado>
+            </Link>
           </CardCachorro>
         ))}
       </ContainerCardsCachorros>
