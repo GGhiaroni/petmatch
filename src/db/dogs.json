@@ -61,7 +61,7 @@
       "peso": 15,
       "raca": "Cocker Spaniel",
       "porte": "Médio",
-      "foto": "https://box4pets.com.br/cdn/shop/articles/cocker-spaniel_1920x.jpg?v=1655305854"
+      "foto": "https://blog-static.petlove.com.br/wp-content/uploads/2019/12/cocker_ingles.jpg"
     },
     {
       "id": 8,
@@ -134,6 +134,141 @@
       "raca": "Pastor Alemão",
       "porte": "Grande",
       "foto": "https://premierpet.com.br/wp-content/uploads/2024/03/pastor-alemao-filhote-1024x683.jpg"
+    },
+    {
+      "id": 16,
+      "nome": "Apollo",
+      "idade": 4,
+      "peso": 28,
+      "raca": "Doberman",
+      "porte": "Grande",
+      "foto": "https://media.istockphoto.com/id/1223511966/pt/foto/beautiful-tan-and-black-german-pinscher.jpg?s=612x612&w=0&k=20&c=xgD18qRLARmqtpVVAZPkw_5J5SsO9MmmboxscLDuZyE="
+    },
+    {
+      "id": 17,
+      "nome": "Lola",
+      "idade": 3,
+      "peso": 6,
+      "raca": "Pug",
+      "porte": "Pequeno",
+      "foto": "https://midias.agazeta.com.br/2024/03/26/desafios-e-controversias-proibir-ou-nao-a-criacao-de-shih-tzu-pug-e-buldogue-2054955-article.jpg"
+    },
+    {
+      "id": 18,
+      "nome": "Simba",
+      "idade": 5,
+      "peso": 9,
+      "raca": "Spitz Alemão",
+      "porte": "Pequeno",
+      "foto": "https://www.equilibrio-petfood.com/wp-content/uploads/2023/02/image-344.png"
+    },
+    {
+      "id": 19,
+      "nome": "Diana",
+      "idade": 2,
+      "peso": 10,
+      "raca": "Cavalier King Charles Spaniel",
+      "porte": "Pequeno",
+      "foto": "https://www.azpetshop.com.br/img/news/89/000.webp"
+    },
+    {
+      "id": 20,
+      "nome": "Zion",
+      "idade": 4,
+      "peso": 13,
+      "raca": "Schnauzer",
+      "porte": "Médio",
+      "foto": "https://www.azpetshop.com.br/img/news/88/000.webp"
+    },
+    {
+      "id": 21,
+      "nome": "Maya",
+      "idade": 3,
+      "peso": 11,
+      "raca": "Basenji",
+      "porte": "Médio",
+      "foto": "https://www.petz.com.br/cachorro/racas/basenji/img/basenji-caracteristicas-guia-racas.webp"
+    },
+    {
+      "id": 22,
+      "nome": "Fred",
+      "idade": 6,
+      "peso": 16,
+      "raca": "Whippet",
+      "porte": "Médio",
+      "foto": "https://blog.polipet.com.br/wp-content/uploads/2023/11/AdobeStock_171997457-scaled.jpeg"
+    },
+    {
+      "id": 23,
+      "nome": "Penny",
+      "idade": 5,
+      "peso": 18,
+      "raca": "Samoyeda",
+      "porte": "Grande",
+      "foto": "https://uploads.metroimg.com/wp-content/uploads/2020/06/10125757/harold-dixon-ljwfTpPLySk-unsplash.jpg"
+    },
+    {
+      "id": 24,
+      "nome": "Hulk",
+      "idade": 4,
+      "peso": 35,
+      "raca": "Bernese Mountain Dog",
+      "porte": "Grande",
+      "foto": "https://www.rover.com/blog/wp-content/uploads/2019/06/bernese-mountain-dog-1024x680.jpg"
+    },
+    {
+      "id": 25,
+      "nome": "Daisy",
+      "idade": 2,
+      "peso": 6,
+      "raca": "Maltês",
+      "porte": "Pequeno",
+      "foto": "https://www.petz.com.br/blog/wp-content/uploads/2023/04/como-cuidar-de-um-cachorro-maltes-2.jpg"
+    },
+    {
+      "id": 26,
+      "nome": "Ragnar",
+      "idade": 5,
+      "peso": 28,
+      "raca": "Akita Inu",
+      "porte": "Grande",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/7/78/Akita_inu.jpeg"
+    },
+    {
+      "id": 27,
+      "nome": "Chico",
+      "idade": 3,
+      "peso": 7,
+      "raca": "Fox Terrier",
+      "porte": "Pequeno",
+      "foto": "https://i0.wp.com/destinopet.com.br/wp-content/uploads/2024/03/Fox-Terrier-cao.webp?fit=1980%2C849&quality=80&ssl=1"
+    },
+    {
+      "id": 28,
+      "nome": "Charlotte",
+      "idade": 2,
+      "peso": 12,
+      "raca": "Shar Pei",
+      "porte": "Médio",
+      "foto": "https://pet-health-content-media.chewy.com/wp-content/uploads/2024/09/11171105/202106GettyImages-1283678952-scaled-1.jpg"
+    },
+    {
+      "id": 29,
+      "nome": "Floquinho",
+      "idade": 6,
+      "peso": 20,
+      "raca": "Dálmata",
+      "porte": "Médio",
+      "foto": "https://www.petz.com.br/cachorro/racas/dalmata/img/dalmata-caracteristicas-guia-racas.jpg"
+    },
+    {
+      "id": 30,
+      "nome": "Fiona",
+      "idade": 4,
+      "peso": 30,
+      "raca": "Weimaraner",
+      "porte": "Grande",
+      "foto": "https://cobasi.vteximg.com.br/arquivos/ids/573854/weimaraner-saiba-tudo-sobre-a-raca-meio-3.png?v=637568744215230000"
     }
   ]
 }
