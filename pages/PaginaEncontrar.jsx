@@ -80,6 +80,10 @@ const ImgCachorro = styled.img`
   height: 200px;
   object-fit: cover;
   border-radius: 15px 15px 0 0;
+  &:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
 `;
 
 const TextoCardCachorro = styled.div`
