@@ -73,6 +73,7 @@ const CardCachorro = styled.div`
   width: 100%;
   overflow: hidden;
   padding-bottom: 20px;
+  cursor: pointer;
 `;
 
 const ImgCachorro = styled.img`
@@ -125,7 +126,15 @@ const PaginaEncontrar = () => {
   const [cachorros, setCachorros] = useState([]);
 
   useEffect(() => {
-    setCachorros(listaInicialCachorros.dogs);
+    const misturarArray = (array) => {
+      let novoArray = [...array];
+      for (let i = novoArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [novoArray[i], novoArray[j]] = [novoArray[j], novoArray[i]];
+      }
+      return novoArray;
+    };
+    setCachorros(misturarArray(listaInicialCachorros.dogs));
   }, []);
 
   return (
