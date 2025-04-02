@@ -1,4 +1,5 @@
 import { CiCalendar, CiHeart, CiMapPin, CiRuler } from "react-icons/ci";
+import { IoIosInformationCircleOutline } from "react-icons/io";
 import { LuArrowLeft } from "react-icons/lu";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
@@ -71,6 +72,7 @@ const BtnFavorito = styled.button`
 
 const ContainerInfosDestaque = styled.div`
   margin-top: 3rem;
+  margin-bottom: 3rem;
   display: flex;
   gap: 2rem;
   justify-content: center;
@@ -94,6 +96,19 @@ const TituloIcone = styled.span`
 const TextoIcone = styled.span`
   font-size: 0.9rem;
   color: var(--corTexto);
+`;
+
+const ContainerSobre = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const InfoTitulo = styled.h2`
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1.6rem;
+  color: var(--corTextoPrincipal);
 `;
 
 const PaginaDetalhesCachorro = () => {
@@ -139,6 +154,11 @@ const PaginaDetalhesCachorro = () => {
               </ContainerIcone>
             ))}
           </ContainerInfosDestaque>
+          <ContainerSobre>
+            <InfoTitulo>
+              <IoIosInformationCircleOutline size={25} /> Sobre {cachorro.nome}
+            </InfoTitulo>
+          </ContainerSobre>
         </InformacoesCachorro>
       </ContainerFotoInformacoes>
     </ContainerPrincipal>
