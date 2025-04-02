@@ -1,3 +1,4 @@
+import { CiHeart } from "react-icons/ci";
 import { LuArrowLeft } from "react-icons/lu";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
@@ -38,7 +39,10 @@ const InformacoesCachorro = styled.div`
 
 const NomeEBotaoFavorito = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 30rem;
 `;
 
 const NomeERacaCachorro = styled.div`
@@ -54,6 +58,14 @@ const NomeCachorro = styled.h2`
 const RacaCachorro = styled.span`
   font-size: 1.1rem;
   color: var(--corTexto);
+`;
+
+const BtnFavorito = styled.button`
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 8px 8px;
+  border: 1px solid #d4d8de;
 `;
 
 const PaginaDetalhesCachorro = () => {
@@ -76,6 +88,9 @@ const PaginaDetalhesCachorro = () => {
               <NomeCachorro>{cachorro.nome}</NomeCachorro>
               <RacaCachorro>{cachorro.raca}</RacaCachorro>
             </NomeERacaCachorro>
+            <BtnFavorito>
+              <CiHeart size={20} />
+            </BtnFavorito>
           </NomeEBotaoFavorito>
         </InformacoesCachorro>
       </ContainerFotoInformacoes>
