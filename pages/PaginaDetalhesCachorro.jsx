@@ -70,7 +70,30 @@ const BtnFavorito = styled.button`
 `;
 
 const ContainerInfosDestaque = styled.div`
+  margin-top: 3rem;
   display: flex;
+  gap: 2rem;
+  justify-content: center;
+`;
+
+const ContainerIcone = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 5.5rem;
+  border-radius: 10px;
+  border: 1px solid #e0e4e8;
+  gap: 1px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.05);
+`;
+
+const TituloIcone = styled.span`
+  font-size: 1rem;
+  color: var(--corTextoPrincipal);
+`;
+const TextoIcone = styled.span`
+  font-size: 0.9rem;
+  color: var(--corTexto);
 `;
 
 const PaginaDetalhesCachorro = () => {
@@ -80,7 +103,8 @@ const PaginaDetalhesCachorro = () => {
     (cachorro) => cachorro.id === Number(parametroUrl.id)
   );
 
-  const iconesContainerDetalhes = [CiMapPin, CiRuler, CiCalendar];
+  const iconesContainerDetalhes = [CiCalendar, CiRuler, CiMapPin];
+  const titulosIcones = ["Idade", "Porte", "Local"];
 
   return (
     <ContainerPrincipal>
@@ -102,7 +126,17 @@ const PaginaDetalhesCachorro = () => {
           </NomeEBotaoFavorito>
           <ContainerInfosDestaque>
             {iconesContainerDetalhes.map((Icone, index) => (
-              <Icone key={index} size={20} />
+              <ContainerIcone key={index}>
+                <Icone size={30} color="#226add" />
+                <TituloIcone>{titulosIcones[index]}</TituloIcone>
+                <TextoIcone>
+                  {index === 0
+                    ? cachorro.idade
+                    : index === 1
+                    ? cachorro.porte
+                    : cachorro.abrigo}
+                </TextoIcone>
+              </ContainerIcone>
             ))}
           </ContainerInfosDestaque>
         </InformacoesCachorro>
