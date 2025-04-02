@@ -20,6 +20,18 @@ const H3Estilizado = styled.h3`
   gap: 8px;
 `;
 
+const ContainerFotoInformacoes = styled.div`
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+`;
+
+const Img = styled.img`
+  height: 500px;
+  width: 600px;
+  border-radius: 15px;
+`;
+
 const PaginaDetalhesCachorro = () => {
   const parametroUrl = useParams();
   const cachorro = listaInicialCachorros.dogs.find(
@@ -32,6 +44,9 @@ const PaginaDetalhesCachorro = () => {
         <LuArrowLeft />
         Voltar para lista
       </H3Estilizado>
+      <ContainerFotoInformacoes>
+        <Img src={cachorro.foto} />
+      </ContainerFotoInformacoes>
     </ContainerPrincipal>
   );
 };
