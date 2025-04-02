@@ -23,13 +23,37 @@ const H3Estilizado = styled.h3`
 const ContainerFotoInformacoes = styled.div`
   margin-top: 2rem;
   display: flex;
-  gap: 1rem;
+  gap: 2.5rem;
 `;
 
 const Img = styled.img`
   height: 500px;
   width: 600px;
   border-radius: 15px;
+`;
+
+const InformacoesCachorro = styled.div`
+  display: flex;
+`;
+
+const NomeEBotaoFavorito = styled.div`
+  display: flex;
+  justify-content: space-around;
+`;
+
+const NomeERacaCachorro = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const NomeCachorro = styled.h2`
+  font-size: 2.2rem;
+  color: var(--corTextoPrincipal);
+`;
+
+const RacaCachorro = styled.span`
+  font-size: 1.1rem;
+  color: var(--corTexto);
 `;
 
 const PaginaDetalhesCachorro = () => {
@@ -46,6 +70,14 @@ const PaginaDetalhesCachorro = () => {
       </H3Estilizado>
       <ContainerFotoInformacoes>
         <Img src={cachorro.foto} />
+        <InformacoesCachorro>
+          <NomeEBotaoFavorito>
+            <NomeERacaCachorro>
+              <NomeCachorro>{cachorro.nome}</NomeCachorro>
+              <RacaCachorro>{cachorro.raca}</RacaCachorro>
+            </NomeERacaCachorro>
+          </NomeEBotaoFavorito>
+        </InformacoesCachorro>
       </ContainerFotoInformacoes>
     </ContainerPrincipal>
   );
