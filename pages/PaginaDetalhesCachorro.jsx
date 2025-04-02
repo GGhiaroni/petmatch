@@ -1,4 +1,4 @@
-import { CiHeart } from "react-icons/ci";
+import { CiCalendar, CiHeart, CiMapPin, CiRuler } from "react-icons/ci";
 import { LuArrowLeft } from "react-icons/lu";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
@@ -35,6 +35,7 @@ const Img = styled.img`
 
 const InformacoesCachorro = styled.div`
   display: flex;
+  flex-direction: column;
 `;
 
 const NomeEBotaoFavorito = styled.div`
@@ -68,11 +69,18 @@ const BtnFavorito = styled.button`
   border: 1px solid #d4d8de;
 `;
 
+const ContainerInfosDestaque = styled.div`
+  display: flex;
+`;
+
 const PaginaDetalhesCachorro = () => {
   const parametroUrl = useParams();
+
   const cachorro = listaInicialCachorros.dogs.find(
     (cachorro) => cachorro.id === Number(parametroUrl.id)
   );
+
+  const iconesContainerDetalhes = [CiMapPin, CiRuler, CiCalendar];
 
   return (
     <ContainerPrincipal>
@@ -92,6 +100,11 @@ const PaginaDetalhesCachorro = () => {
               <CiHeart size={20} />
             </BtnFavorito>
           </NomeEBotaoFavorito>
+          <ContainerInfosDestaque>
+            {iconesContainerDetalhes.map((Icone, index) => (
+              <Icone key={index} size={20} />
+            ))}
+          </ContainerInfosDestaque>
         </InformacoesCachorro>
       </ContainerFotoInformacoes>
     </ContainerPrincipal>
