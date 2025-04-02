@@ -7,7 +7,9 @@
       "peso": 8,
       "raca": "Poodle Toy",
       "porte": "Pequeno",
-      "foto": "https://fly.metroimg.com/upload/q_85,w_700/https://uploads.metroimg.com/wp-content/uploads/2020/02/26145040/poodle1.jpg"
+      "foto": "https://fly.metroimg.com/upload/q_85,w_700/https://uploads.metroimg.com/wp-content/uploads/2020/02/26145040/poodle1.jpg",
+      "bio": "Bolt é um cachorrinho cheio de energia e muito brincalhão. Ele adora correr e explorar novos lugares, sempre espalhando alegria por onde passa.",
+      "abrigo": "Lar dos Peludos"
     },
     {
       "id": 2,
@@ -16,7 +18,9 @@
       "peso": 7,
       "raca": "Shih Tzu",
       "porte": "Pequeno",
-      "foto": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQtXiYXNNXWrBNnAZP5uZ-YHIAhOobtGCVWVw8MPaH8nIVWsk7FRNe3tg0WSmYRvMp-Gg9rMdMu16X0bqw0g_8Tqg"
+      "foto": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQtXiYXNNXWrBNnAZP5uZ-YHIAhOobtGCVWVw8MPaH8nIVWsk7FRNe3tg0WSmYRvMp-Gg9rMdMu16X0bqw0g_8Tqg",
+      "bio": "Luna é uma cachorrinha muito esperta e afetuosa. Foi resgatada das ruas e agora está pronta para encontrar um lar amoroso onde possa receber todo o carinho que merece.",
+      "abrigo": "Patinhas Felizes"
     },
     {
       "id": 3,
@@ -25,7 +29,9 @@
       "peso": 6,
       "raca": "Chihuahua",
       "porte": "Pequeno",
-      "foto": "https://i0.statig.com.br/bancodeimagens/er/g7/7p/erg77pxjsqiwg7doduefmama5.jpg"
+      "foto": "https://i0.statig.com.br/bancodeimagens/er/g7/7p/erg77pxjsqiwg7doduefmama5.jpg",
+      "bio": "Max é um pequeno aventureiro com um grande coração. Sempre curioso e cheio de energia, ele adora brincar e receber carinho.",
+      "abrigo": "Amigos de Quatro Patas"
     },
     {
       "id": 4,
@@ -34,7 +40,9 @@
       "peso": 9,
       "raca": "Dachshund",
       "porte": "Pequeno",
-      "foto": "https://www.patasdacasa.com.br/sites/default/files/styles/article_detail_1200/public/noticias/2021/02/alopecia-canina-saiba-mais-sobre-a-queda-de-pelos-em-dachshunds.jpg.webp?itok=QEWOZop5"
+      "foto": "https://www.patasdacasa.com.br/sites/default/files/styles/article_detail_1200/public/noticias/2021/02/alopecia-canina-saiba-mais-sobre-a-queda-de-pelos-em-dachshunds.jpg.webp?itok=QEWOZop5",
+      "bio": "Bella é uma cachorrinha dócil e carinhosa. Com seu jeitinho encantador, conquista a todos ao seu redor.",
+      "abrigo": "Coração Canino"
     },
     {
       "id": 5,
@@ -44,6 +52,8 @@
       "raca": "Yorkshire Terrier",
       "porte": "Pequeno",
       "foto": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR0gLoxezclGoSSKOkCT7hkwlx8bm2_-UlpAIagCMEObOgu-xw-_wy6CYLSz-HVxnOCleBUGuO1FildXSvoaqBxnw"
+      "bio": "",
+      "abrigo": "Casa dos Aumigos"
     },
     {
       "id": 6,
@@ -53,6 +63,8 @@
       "raca": "Beagle",
       "porte": "Médio",
       "foto": "https://www.zooplus.pt/magazine/wp-content/uploads/2018/06/beagle_2.jpg"
+      "bio": "",
+      "abrigo": "Adote um Focinho"
     },
     {
       "id": 7,
@@ -62,6 +74,8 @@
       "raca": "Cocker Spaniel",
       "porte": "Médio",
       "foto": "https://blog-static.petlove.com.br/wp-content/uploads/2019/12/cocker_ingles.jpg"
+      "bio": "",
+      "abrigo": "Refúgio dos Focinhos"
     },
     {
       "id": 8,
@@ -71,6 +85,8 @@
       "raca": "Border Collie",
       "porte": "Médio",
       "foto": "https://www.dogvibe.com.br/wp-content/uploads/2023/05/guia_racas_border_collie.webp"
+      "bio": "",
+      "abrigo": "Coração Canino"
     },
     {
       "id": 9,
@@ -80,6 +96,8 @@
       "raca": "Bulldog Francês",
       "porte": "Médio",
       "foto": "https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2024/06/28/651347317-buldogue-frances.jpg"
+      "bio": "",
+      "abrigo": "Peludos & Cia"
     },
     {
       "id": 10,
@@ -89,6 +107,8 @@
       "raca": "Pastor Australiano",
       "porte": "Médio",
       "foto": "https://www.cobasi.com.br/arquivos/pastor-australiano-meio.png?v=637613614003970000"
+      "bio": "",
+      "abrigo": "Patinhas Felizes"
     },
     {
       "id": 11,
@@ -98,6 +118,8 @@
       "raca": "Golden Retriever",
       "porte": "Grande",
       "foto": "https://www.patasdacasa.com.br/sites/default/files/styles/article_detail_1200/public/noticias/2023/01/golden-retriever-filhote-6-cuidados-importantes-no-primeiro-ano-de-vida-da-raca.jpg.webp?itok=hGhLxrKp"
+      "bio": "",
+      "abrigo": "Patinhas Felizes"
     },
     {
       "id": 12,
@@ -107,6 +129,8 @@
       "raca": "Rottweiler",
       "porte": "Grande",
       "foto": "https://www.animalepetshop.com.br/wp-content/uploads/2016/03/rotweiller-1.jpg"
+      "bio": "",
+      "abrigo": "Casa dos Aumigos"
     },
     {
       "id": 13,
@@ -116,6 +140,8 @@
       "raca": "Husky Siberiano",
       "porte": "Grande",
       "foto": "https://st2.depositphotos.com/1007517/49567/i/450/depositphotos_495673738-stock-photo-siberian-husky-puppy-outdoors.jpg"
+      "bio": "",
+      "abrigo": "Refúgio dos Focinhos"
     },
     {
       "id": 14,
@@ -125,6 +151,8 @@
       "raca": "Labrador Retriever",
       "porte": "Grande",
       "foto": "https://upload.wikimedia.org/wikipedia/commons/3/34/Labrador_on_Quantock_%282175262184%29.jpg"
+      "bio": "",
+      "abrigo": "Esperança Animal"
     },
     {
       "id": 15,
@@ -134,6 +162,8 @@
       "raca": "Pastor Alemão",
       "porte": "Grande",
       "foto": "https://premierpet.com.br/wp-content/uploads/2024/03/pastor-alemao-filhote-1024x683.jpg"
+      "bio": "",
+      "abrigo": "Esperança Animal"
     },
     {
       "id": 16,
@@ -143,6 +173,8 @@
       "raca": "Doberman",
       "porte": "Grande",
       "foto": "https://media.istockphoto.com/id/1223511966/pt/foto/beautiful-tan-and-black-german-pinscher.jpg?s=612x612&w=0&k=20&c=xgD18qRLARmqtpVVAZPkw_5J5SsO9MmmboxscLDuZyE="
+      "bio": "",
+      "abrigo": "Amigos de Quatro Patas"
     },
     {
       "id": 17,
@@ -152,6 +184,8 @@
       "raca": "Pug",
       "porte": "Pequeno",
       "foto": "https://midias.agazeta.com.br/2024/03/26/desafios-e-controversias-proibir-ou-nao-a-criacao-de-shih-tzu-pug-e-buldogue-2054955-article.jpg"
+      "bio": "",
+      "abrigo": "Amigos de Quatro Patas"
     },
     {
       "id": 18,
@@ -161,6 +195,8 @@
       "raca": "Spitz Alemão",
       "porte": "Pequeno",
       "foto": "https://www.equilibrio-petfood.com/wp-content/uploads/2023/02/image-344.png"
+      "bio": "",
+      "abrigo": "Santuário dos Cães"
     },
     {
       "id": 19,
@@ -170,6 +206,8 @@
       "raca": "Cavalier King Charles Spaniel",
       "porte": "Pequeno",
       "foto": "https://www.azpetshop.com.br/img/news/89/000.webp"
+      "bio": "",
+      "abrigo": "Santuário dos Cães"
     },
     {
       "id": 20,
@@ -179,6 +217,8 @@
       "raca": "Schnauzer",
       "porte": "Médio",
       "foto": "https://www.azpetshop.com.br/img/news/88/000.webp"
+      "bio": "",
+      "abrigo": "Adote um Focinho"
     },
     {
       "id": 21,
@@ -188,6 +228,8 @@
       "raca": "Basenji",
       "porte": "Médio",
       "foto": "https://www.petz.com.br/cachorro/racas/basenji/img/basenji-caracteristicas-guia-racas.webp"
+      "bio": "",
+      "abrigo": "Adote um Focinho"
     },
     {
       "id": 22,
@@ -197,6 +239,8 @@
       "raca": "Whippet",
       "porte": "Médio",
       "foto": "https://blog.polipet.com.br/wp-content/uploads/2023/11/AdobeStock_171997457-scaled.jpeg"
+      "bio": "",
+      "abrigo": "Adote um Focinho"
     },
     {
       "id": 23,
@@ -206,6 +250,8 @@
       "raca": "Samoyeda",
       "porte": "Grande",
       "foto": "https://uploads.metroimg.com/wp-content/uploads/2020/06/10125757/harold-dixon-ljwfTpPLySk-unsplash.jpg"
+      "bio": "",
+      "abrigo": "Coração Canino"
     },
     {
       "id": 24,
@@ -215,6 +261,8 @@
       "raca": "Bernese Mountain Dog",
       "porte": "Grande",
       "foto": "https://www.rover.com/blog/wp-content/uploads/2019/06/bernese-mountain-dog-1024x680.jpg"
+      "bio": "",
+      "abrigo": ""
     },
     {
       "id": 25,
@@ -224,6 +272,8 @@
       "raca": "Maltês",
       "porte": "Pequeno",
       "foto": "https://www.petz.com.br/blog/wp-content/uploads/2023/04/como-cuidar-de-um-cachorro-maltes-2.jpg"
+      "bio": "",
+      "abrigo": "Coração Canino"
     },
     {
       "id": 26,
@@ -233,6 +283,8 @@
       "raca": "Akita Inu",
       "porte": "Grande",
       "foto": "https://upload.wikimedia.org/wikipedia/commons/7/78/Akita_inu.jpeg"
+      "bio": "",
+      "abrigo": "Lar dos Peludos"
     },
     {
       "id": 27,
@@ -242,6 +294,8 @@
       "raca": "Fox Terrier",
       "porte": "Pequeno",
       "foto": "https://i0.wp.com/destinopet.com.br/wp-content/uploads/2024/03/Fox-Terrier-cao.webp?fit=1980%2C849&quality=80&ssl=1"
+      "bio": "",
+      "abrigo": "Lar dos Peludos"
     },
     {
       "id": 28,
@@ -251,6 +305,8 @@
       "raca": "Shar Pei",
       "porte": "Médio",
       "foto": "https://pet-health-content-media.chewy.com/wp-content/uploads/2024/09/11171105/202106GettyImages-1283678952-scaled-1.jpg"
+      "bio": "",
+      "abrigo": "Lar dos Peludos"
     },
     {
       "id": 29,
@@ -260,6 +316,8 @@
       "raca": "Dálmata",
       "porte": "Médio",
       "foto": "https://www.petz.com.br/cachorro/racas/dalmata/img/dalmata-caracteristicas-guia-racas.jpg"
+      "bio": "",
+      "abrigo": "Esperança Animal"
     },
     {
       "id": 30,
@@ -269,6 +327,8 @@
       "raca": "Weimaraner",
       "porte": "Grande",
       "foto": "https://cobasi.vteximg.com.br/arquivos/ids/573854/weimaraner-saiba-tudo-sobre-a-raca-meio-3.png?v=637568744215230000"
+      "bio": "",
+      "abrigo": "Refúgio dos Focinhos"
     }
   ]
 }
