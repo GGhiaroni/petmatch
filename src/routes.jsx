@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Favoritos from "../pages/Favoritos";
 import Home from "../pages/Home";
 import PaginaDetalhesCachorro from "../pages/PaginaDetalhesCachorro";
 import PaginaEncontrar from "../pages/PaginaEncontrar";
@@ -15,6 +16,7 @@ function AppRoutes() {
           path="/cachorros/:porte/:id"
           element={<PaginaDetalhesCachorro />}
         />
+        <Route path="/favoritos" element={<Favoritos />} />
       </Routes>
     </BrowserRouter>
   );
