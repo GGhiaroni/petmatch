@@ -82,7 +82,7 @@ const ContainerIcone = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 5.5rem;
+  padding: 2rem 4rem;
   border-radius: 10px;
   border: 1px solid #e0e4e8;
   gap: 1px;
