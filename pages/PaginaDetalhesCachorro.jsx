@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { CiCalendar, CiHeart, CiMapPin, CiRuler } from "react-icons/ci";
 import { IoIosInformationCircleOutline } from "react-icons/io";
 import { LuArrowLeft } from "react-icons/lu";
@@ -147,6 +148,15 @@ const ImgContainerInferior = styled.img`
   border-radius: 15px;
   height: 100px;
   width: 120px;
+  cursor: pointer;
+`;
+
+const ImgContainerInferiorSelecionada = styled.img`
+  border-radius: 15px;
+  height: 100px;
+  width: 120px;
+  border: 3px solid var(--corHoverIconesBotoes);
+  cursor: pointer;
 `;
 
 const PaginaDetalhesCachorro = () => {
@@ -159,6 +169,12 @@ const PaginaDetalhesCachorro = () => {
   const iconesContainerDetalhes = [CiCalendar, CiRuler, CiMapPin];
   const titulosIcones = ["Idade", "Porte", "Local"];
 
+  const [fotoSelecionada, setFotoSelecionada] = useState(1);
+
+  const selecionarFoto = (id) => {
+    setFotoSelecionada(id);
+  };
+
   return (
     <ContainerPrincipal>
       <Link to="/encontrar">
@@ -168,7 +184,16 @@ const PaginaDetalhesCachorro = () => {
         </H3Estilizado>
       </Link>
       <ContainerFotoInformacoes>
-        <Img src={cachorro.foto} />
+        <Img
+          src={
+            fotoSelecionada === 1
+              ? cachorro.foto
+              : fotoSelecionada === 2
+              ? cachorro.foto2
+              : cachorro.foto3
+          }
+          alt={cachorro.nome}
+        />
         <InformacoesCachorro>
           <NomeEBotaoFavorito>
             <NomeERacaCachorro>
@@ -204,9 +229,45 @@ const PaginaDetalhesCachorro = () => {
         </InformacoesCachorro>
       </ContainerFotoInformacoes>
       <ContainerInferiorImagens>
-        <ImgContainerInferior src={cachorro.foto} />
-        <ImgContainerInferior src={cachorro.foto2} />
-        <ImgContainerInferior src={cachorro.foto3} />
+        {fotoSelecionada === 1 ? (
+          <ImgContainerInferiorSelecionada
+            src={cachorro.foto}
+            alt={cachorro.nome}
+            onClick={() => selecionarFoto(1)}
+          />
+        ) : (
+          <ImgContainerInferior
+            src={cachorro.foto}
+            alt={cachorro.nome}
+            onClick={() => selecionarFoto(1)}
+          />
+        )}
+        {fotoSelecionada === 2 ? (
+          <ImgContainerInferiorSelecionada
+            src={cachorro.foto2}
+            alt={cachorro.nome}
+            onClick={() => selecionarFoto(2)}
+          />
+        ) : (
+          <ImgContainerInferior
+            src={cachorro.foto2}
+            alt={cachorro.nome}
+            onClick={() => selecionarFoto(2)}
+          />
+        )}
+        {fotoSelecionada === 3 ? (
+          <ImgContainerInferiorSelecionada
+            src={cachorro.foto3}
+            alt={cachorro.nome}
+            onClick={() => selecionarFoto(3)}
+          />
+        ) : (
+          <ImgContainerInferior
+            src={cachorro.foto3}
+            alt={cachorro.nome}
+            onClick={() => selecionarFoto(3)}
+          />
+        )}
       </ContainerInferiorImagens>
     </ContainerPrincipal>
   );
