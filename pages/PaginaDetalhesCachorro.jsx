@@ -111,6 +111,31 @@ const InfoTitulo = styled.h2`
   color: var(--corTextoPrincipal);
 `;
 
+const SobreTexto = styled.h4`
+  font-size: 1rem;
+  color: var(--corTexto);
+  font-weight: 300;
+`;
+
+const BotaoEstilizado = styled.button`
+  background-color: #2f7fff;
+  margin-top: 2rem;
+  padding: 12px 35px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  color: #fffffff5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  border: 1px solid #add8e6;
+  width: 100%;
+  cursor: pointer;
+  :hover {
+    background-color: var(--corHoverIconesBotoes);
+  }
+`;
+
 const PaginaDetalhesCachorro = () => {
   const parametroUrl = useParams();
 
@@ -158,7 +183,9 @@ const PaginaDetalhesCachorro = () => {
             <InfoTitulo>
               <IoIosInformationCircleOutline size={25} /> Sobre {cachorro.nome}
             </InfoTitulo>
+            <SobreTexto>{cachorro.bio}</SobreTexto>
           </ContainerSobre>
+          <BotaoEstilizado>Quero adotar</BotaoEstilizado>
         </InformacoesCachorro>
       </ContainerFotoInformacoes>
     </ContainerPrincipal>
