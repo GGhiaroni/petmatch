@@ -1,7 +1,7 @@
 import { CiCalendar, CiHeart, CiMapPin, CiRuler } from "react-icons/ci";
 import { IoIosInformationCircleOutline } from "react-icons/io";
 import { LuArrowLeft } from "react-icons/lu";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
 import listaInicialCachorros from "../src/db/dogs.json";
 
@@ -20,6 +20,7 @@ const H3Estilizado = styled.h3`
   display: flex;
   align-items: center;
   gap: 8px;
+  width: 200px;
 `;
 
 const ContainerFotoInformacoes = styled.div`
@@ -131,7 +132,7 @@ const BotaoEstilizado = styled.button`
   border: 1px solid #add8e6;
   width: 100%;
   cursor: pointer;
-  :hover {
+  &:hover {
     background-color: var(--corHoverIconesBotoes);
   }
 `;
@@ -160,10 +161,12 @@ const PaginaDetalhesCachorro = () => {
 
   return (
     <ContainerPrincipal>
-      <H3Estilizado>
-        <LuArrowLeft />
-        Voltar para lista
-      </H3Estilizado>
+      <Link to="/encontrar">
+        <H3Estilizado>
+          <LuArrowLeft />
+          Voltar para lista
+        </H3Estilizado>
+      </Link>
       <ContainerFotoInformacoes>
         <Img src={cachorro.foto} />
         <InformacoesCachorro>

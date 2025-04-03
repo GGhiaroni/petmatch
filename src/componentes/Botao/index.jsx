@@ -11,7 +11,7 @@ const BotaoEstilizado = styled.button`
   gap: 15px;
   border: 1px solid #add8e6;
 
-  :hover {
+  &:hover {
     background-color: var(--corHoverIconesBotoes);
   }
 `;

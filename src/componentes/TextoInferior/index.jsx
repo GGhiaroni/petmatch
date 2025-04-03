@@ -1,4 +1,5 @@
 import { HiArrowLongRight } from "react-icons/hi2";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Botao from "../Botao";
 
@@ -28,9 +29,11 @@ const TextoInferior = () => {
       <TextoDescricao>
         Comece sua jornada de adoção hoje e mude duas vidas para sempre.
       </TextoDescricao>
-      <Botao>
-        Encontrar cachorros disponíveis <HiArrowLongRight />
-      </Botao>
+      <Link to={"/encontrar"}>
+        <Botao>
+          Encontrar cachorros disponíveis <HiArrowLongRight />
+        </Botao>
+      </Link>
     </TextoInferiorContainer>
   );
 };

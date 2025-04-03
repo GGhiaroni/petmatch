@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Logomarca from "../Logomarca";
 import favoritos from "/src/assets/icone-coracao.png";
@@ -34,11 +35,7 @@ const UlEstilizado = styled.ul`
 
 const LiEstilizado = styled.li`
   display: flex;
-  flex-direction: row;
   align-items: center;
-  gap: 0.5rem;
-  cursor: pointer;
-
   img {
     max-width: 18px;
   }
@@ -46,6 +43,12 @@ const LiEstilizado = styled.li`
   p {
     color: var(--corTexto);
   }
+`;
+
+const LinkEstilizado = styled(Link)`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 `;
 
 const BtnEstilizado = styled.button`
@@ -64,10 +67,11 @@ const Header = () => {
   const icones = [
     {
       src: home,
+      caminho: "/",
       texto: "Início",
     },
-    { src: lupa, texto: "Encontrar" },
-    { src: favoritos, texto: "Favoritos" },
+    { src: lupa, caminho: "/encontrar", texto: "Encontrar" },
+    { src: favoritos, caminho: "/favoritos", texto: "Favoritos" },
   ];
 
   return (
@@ -78,8 +82,10 @@ const Header = () => {
           <UlEstilizado>
             {icones.map((icone, index) => (
               <LiEstilizado key={index}>
-                <img src={icone.src} />
-                <p>{icone.texto}</p>
+                <LinkEstilizado to={icone.caminho}>
+                  <img src={icone.src} />
+                  <p>{icone.texto}</p>
+                </LinkEstilizado>
               </LiEstilizado>
             ))}
           </UlEstilizado>
