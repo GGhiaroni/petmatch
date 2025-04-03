@@ -136,6 +136,18 @@ const BotaoEstilizado = styled.button`
   }
 `;
 
+const ContainerInferiorImagens = styled.div`
+  display: flex;
+  gap: 10px;
+  margin-top: 1rem;
+`;
+
+const ImgContainerInferior = styled.img`
+  border-radius: 15px;
+  height: 100px;
+  width: 100px;
+`;
+
 const PaginaDetalhesCachorro = () => {
   const parametroUrl = useParams();
 
@@ -188,6 +200,9 @@ const PaginaDetalhesCachorro = () => {
           <BotaoEstilizado>Quero adotar</BotaoEstilizado>
         </InformacoesCachorro>
       </ContainerFotoInformacoes>
+      <ContainerInferiorImagens>
+        <ImgContainerInferior src={cachorro.foto} />
+      </ContainerInferiorImagens>
     </ContainerPrincipal>
   );
 };
