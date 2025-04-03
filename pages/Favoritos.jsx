@@ -1,3 +1,4 @@
+import { FiTrash2 } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import cachorros from "../src/db/dogs.json";
@@ -33,6 +34,12 @@ const CardCachorro = styled.div`
   width: 100%;
   overflow: hidden;
   padding-bottom: 20px;
+`;
+
+const ContainerImagem = styled.div`
+  position: relative;
+  width: 100%;
+  height: 200px;
 `;
 
 const ImgCachorro = styled.img`
@@ -82,6 +89,27 @@ const BotaoEstilizado = styled.button`
   }
 `;
 
+const BtnRemoverFavoritos = styled.button`
+  background-color: #de3f3f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25%;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background-color: #c53030;
+  }
+`;
+
 const Favoritos = () => {
   return (
     <ContainerPrincipal>
@@ -89,11 +117,16 @@ const Favoritos = () => {
       <ContainerCardsCachorros>
         {cachorros.dogs.map((cachorro, index) => (
           <CardCachorro>
-            <ImgCachorro
-              src={cachorro.foto}
-              key={index}
-              alt={`Cachorro ${cachorro.nome}`}
-            />
+            <ContainerImagem>
+              <BtnRemoverFavoritos>
+                <FiTrash2 size={15} color="#FFFFFF" />
+              </BtnRemoverFavoritos>
+              <ImgCachorro
+                src={cachorro.foto}
+                key={index}
+                alt={`Cachorro ${cachorro.nome}`}
+              />
+            </ContainerImagem>
             <TextoCardCachorro>
               <NomeCachorro>{cachorro.nome}</NomeCachorro>
               <DadosCachorro>Raça: {cachorro.raca}</DadosCachorro>
