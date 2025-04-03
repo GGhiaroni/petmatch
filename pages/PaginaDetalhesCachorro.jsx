@@ -30,7 +30,7 @@ const ContainerFotoInformacoes = styled.div`
 
 const Img = styled.img`
   height: 500px;
-  width: 600px;
+  width: 620px;
   border-radius: 15px;
 `;
 
@@ -145,7 +145,7 @@ const ContainerInferiorImagens = styled.div`
 const ImgContainerInferior = styled.img`
   border-radius: 15px;
   height: 100px;
-  width: 100px;
+  width: 120px;
 `;
 
 const PaginaDetalhesCachorro = () => {
@@ -202,6 +202,8 @@ const PaginaDetalhesCachorro = () => {
       </ContainerFotoInformacoes>
       <ContainerInferiorImagens>
         <ImgContainerInferior src={cachorro.foto} />
+        <ImgContainerInferior src={cachorro.foto2} />
+        <ImgContainerInferior src={cachorro.foto3} />
       </ContainerInferiorImagens>
     </ContainerPrincipal>
   );
