@@ -5,6 +5,7 @@ import { LuArrowLeft } from "react-icons/lu";
 import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
 import listaInicialCachorros from "../src/db/dogs.json";
+import useFavoritosStore from "../src/store/useFavoritosStore";
 
 const ContainerPrincipal = styled.div`
   background: #ffffff;
@@ -166,6 +167,19 @@ const PaginaDetalhesCachorro = () => {
     (cachorro) => cachorro.id === Number(parametroUrl.id)
   );
 
+  const { favoritos, adicionarAosFavoritos, removerFavorito } =
+    useFavoritosStore();
+
+  const estaNosFavoritos = favoritos.some((c) => c.id === cachorro.id);
+
+  const alternarFavoritos = () => {
+    if (estaNosFavoritos) {
+      removerFavorito(cachorro.id);
+    } else {
+      adicionarAosFavoritos(cachorro);
+    }
+  };
+
   const iconesContainerDetalhes = [CiCalendar, CiRuler, CiMapPin];
   const titulosIcones = ["Idade", "Porte", "Local"];
 
@@ -200,8 +214,14 @@ const PaginaDetalhesCachorro = () => {
               <NomeCachorro>{cachorro.nome}</NomeCachorro>
               <RacaCachorro>{cachorro.raca}</RacaCachorro>
             </NomeERacaCachorro>
-            <BtnFavorito>
-              <CiHeart size={20} />
+            <BtnFavorito
+              onClick={alternarFavoritos}
+              style={{ backgroundColor: estaNosFavoritos ? "#de3f3f" : "" }}
+            >
+              <CiHeart
+                size={20}
+                color={estaNosFavoritos ? "white" : "#404040"}
+              />
             </BtnFavorito>
           </NomeEBotaoFavorito>
           <ContainerInfosDestaque>
