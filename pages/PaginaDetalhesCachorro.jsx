@@ -215,7 +215,7 @@ const PaginaDetalhesCachorro = () => {
               <RacaCachorro>{cachorro.raca}</RacaCachorro>
             </NomeERacaCachorro>
             <BtnFavorito
-              onClick={alternarFavoritos}
+              onClick={() => alternarFavoritos()}
               style={{ backgroundColor: estaNosFavoritos ? "#de3f3f" : "" }}
             >
               <CiHeart

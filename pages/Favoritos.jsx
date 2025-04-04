@@ -1,7 +1,7 @@
 import { FiTrash2 } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import cachorros from "../src/db/dogs.json";
+import useFavoritosStore from "../src/store/useFavoritosStore";
 
 const ContainerPrincipal = styled.div`
   background: #ffffff;
@@ -111,14 +111,24 @@ const BtnRemoverFavoritos = styled.button`
 `;
 
 const Favoritos = () => {
+  const { favoritos, removerFavorito } = useFavoritosStore();
+
+  const removerDosFavoritos = (id) => {
+    removerFavorito(id);
+  };
+
+  console.log(favoritos);
+
   return (
     <ContainerPrincipal>
       <TextoPrincipal>Meus favoritos</TextoPrincipal>
       <ContainerCardsCachorros>
-        {cachorros.dogs.map((cachorro, index) => (
+        {favoritos.map((cachorro, index) => (
           <CardCachorro>
             <ContainerImagem>
-              <BtnRemoverFavoritos>
+              <BtnRemoverFavoritos
+                onClick={() => removerDosFavoritos(cachorro.id)}
+              >
                 <FiTrash2 size={15} color="#FFFFFF" />
               </BtnRemoverFavoritos>
               <ImgCachorro
