@@ -70,8 +70,8 @@ const Header = () => {
       caminho: "/",
       texto: "Início",
     },
-    { src: lupa, caminho: "/encontrar", texto: "Encontrar" },
-    { src: favoritos, caminho: "/favoritos", texto: "Favoritos" },
+    { src: lupa, caminho: "encontrar", texto: "Encontrar" },
+    { src: favoritos, caminho: "favoritos", texto: "Favoritos" },
   ];
 
   return (
@@ -90,7 +90,9 @@ const Header = () => {
             ))}
           </UlEstilizado>
         </ContainterBotoesHeader>
-        <BtnEstilizado>Quero adotar</BtnEstilizado>
+        <LinkEstilizado to="contato">
+          <BtnEstilizado>Quero adotar</BtnEstilizado>
+        </LinkEstilizado>
       </ContainerIconesEBotao>
     </HeaderEstilizado>
   );

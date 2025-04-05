@@ -245,7 +245,9 @@ const PaginaDetalhesCachorro = () => {
             </InfoTitulo>
             <SobreTexto>{cachorro.bio}</SobreTexto>
           </ContainerSobre>
-          <BotaoEstilizado>Quero adotar</BotaoEstilizado>
+          <Link to="/contato">
+            <BotaoEstilizado>Quero adotar</BotaoEstilizado>
+          </Link>
         </InformacoesCachorro>
       </ContainerFotoInformacoes>
       <ContainerInferiorImagens>

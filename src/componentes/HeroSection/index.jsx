@@ -50,16 +50,18 @@ const HeroSection = () => {
         como você.
       </SpanEstilizado>
       <ContainerBotoes>
-        <Link to={"/encontrar"}>
+        <Link to="encontrar">
           <Botao>
             <CiSearch />
             Encontrar um amigo
           </Botao>
         </Link>
-        <BtnContato>
-          <AiOutlineMessage />
-          Falar com abrigo
-        </BtnContato>
+        <Link to="contato">
+          <BtnContato>
+            <AiOutlineMessage />
+            Falar com abrigo
+          </BtnContato>
+        </Link>
       </ContainerBotoes>
       <HeroSectionIcones />
     </HeroSectionContainer>
