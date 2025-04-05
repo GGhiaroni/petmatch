@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Contato from "../pages/Contato";
 import Favoritos from "../pages/Favoritos";
 import Home from "../pages/Home";
 import PaginaDetalhesCachorro from "../pages/PaginaDetalhesCachorro";
@@ -13,10 +14,11 @@ function AppRoutes() {
         <Route index element={<Home />} />
         <Route path="encontrar" element={<PaginaEncontrar />} />
         <Route
-          path="/cachorros/:porte/:id"
+          path="cachorros/:porte/:id"
           element={<PaginaDetalhesCachorro />}
         />
-        <Route path="/favoritos" element={<Favoritos />} />
+        <Route path="favoritos" element={<Favoritos />} />
+        <Route path="contato" element={<Contato />} />
       </Routes>
     </BrowserRouter>
   );
