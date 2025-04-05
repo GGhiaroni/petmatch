@@ -14,6 +14,7 @@ const ContainerPrincipal = styled.div`
 const TextoPrincipal = styled.h1`
   font-size: 2.5rem;
   text-align: center;
+  color: var(--corTextoPrincipal);
 `;
 
 const ContainerCardsCachorros = styled.div`
