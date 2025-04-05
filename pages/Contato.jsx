@@ -1,3 +1,6 @@
+import { BsTelephone } from "react-icons/bs";
+import { HiOutlineEnvelope } from "react-icons/hi2";
+import { IoLocationOutline } from "react-icons/io5";
 import styled from "styled-components";
 
 const ContainerPrincipal = styled.div`
@@ -29,7 +32,33 @@ const BlocoEnviarMensagem = styled.div`
 const BlocoInfosContato = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 4rem;
+  padding: 1.5rem 2rem;
+`;
+
+const BlocoIconeInfoContato = styled.div`
+  display: flex;
+  align-items: start;
+  border: 1px solid #d4d8de;
+  border-radius: 15px;
+  padding: 2rem 2rem;
+  gap: 1rem;
+`;
+
+const Informacoes = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const TituloInformacoes = styled.h4`
+  font-size: 1.2rem;
+  font-weight: 500;
+`;
+
+const TextoInformacoes = styled.p`
+  font-size: 0.9rem;
+  color: var(--corTexto);
+  font-weight: 300;
 `;
 
 const TituloBlocoMensagem = styled.h4`
@@ -71,6 +100,7 @@ const Input = styled.input`
 `;
 
 const TextArea = styled.textarea`
+  margin-top: 5px;
   padding: 10px 15px;
   background: transparent;
   border-radius: 10px;
@@ -84,6 +114,19 @@ const TextArea = styled.textarea`
 `;
 
 const Contato = () => {
+  const icones = [IoLocationOutline, BsTelephone, HiOutlineEnvelope];
+  const titulos = ["Endereço", "Telefone", "E-mail"];
+  const descricaoUm = [
+    "Rua dos Animais, 123",
+    "(41) 1234-5678",
+    "contato@petmatch.com",
+  ];
+  const descricaoDois = [
+    "Água Verde - Curitiba - PR",
+    "Segunda a sexta, 09h às 18h",
+    "Respondemos em até 24h",
+  ];
+
   return (
     <ContainerPrincipal>
       <TextoPrincipal>Entre em contato</TextoPrincipal>
@@ -115,7 +158,18 @@ const Contato = () => {
           <Label>Mensagem</Label>
           <TextArea placeholder="Escreva sua mensagem aqui..." />
         </BlocoEnviarMensagem>
-        <BlocoInfosContato></BlocoInfosContato>
+        <BlocoInfosContato>
+          {icones.map((Icone, index) => (
+            <BlocoIconeInfoContato>
+              <Icone key={index} size={20} color="#226add" />
+              <Informacoes>
+                <TituloInformacoes>{titulos[index]}</TituloInformacoes>
+                <TextoInformacoes>{descricaoUm[index]}</TextoInformacoes>
+                <TextoInformacoes>{descricaoDois[index]}</TextoInformacoes>
+              </Informacoes>
+            </BlocoIconeInfoContato>
+          ))}
+        </BlocoInfosContato>
       </ContainerBlocos>
     </ContainerPrincipal>
   );
