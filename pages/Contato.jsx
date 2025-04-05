@@ -20,6 +20,7 @@ const TextoPrincipal = styled.h1`
 
 const ContainerBlocos = styled.div`
   display: flex;
+  justify-content: center;
   gap: 10px;
 `;
 
@@ -32,17 +33,38 @@ const BlocoEnviarMensagem = styled.div`
 const BlocoInfosContato = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 1rem;
   padding: 1.5rem 2rem;
 `;
 
 const BlocoIconeInfoContato = styled.div`
   display: flex;
-  align-items: start;
+  align-items: center;
   border: 1px solid #d4d8de;
   border-radius: 15px;
   padding: 2rem 2rem;
   gap: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  svg {
+    color: #226add;
+    transition: color 0.3s ease;
+  }
+
+  &:hover {
+    background-color: var(--corIconesBotoes);
+    border: 1px solid #ffffff;
+
+    h4,
+    p {
+      color: #ffffff;
+    }
+
+    svg {
+      color: #ffffff;
+    }
+  }
 `;
 
 const Informacoes = styled.div`
@@ -161,7 +183,7 @@ const Contato = () => {
         <BlocoInfosContato>
           {icones.map((Icone, index) => (
             <BlocoIconeInfoContato>
-              <Icone key={index} size={20} color="#226add" />
+              <Icone key={index} size={25} style={{ marginBottom: "42px" }} />
               <Informacoes>
                 <TituloInformacoes>{titulos[index]}</TituloInformacoes>
                 <TextoInformacoes>{descricaoUm[index]}</TextoInformacoes>
