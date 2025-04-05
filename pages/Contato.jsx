@@ -1,4 +1,5 @@
 import { BsTelephone } from "react-icons/bs";
+import { FaRegPaperPlane } from "react-icons/fa6";
 import { HiOutlineEnvelope } from "react-icons/hi2";
 import { IoLocationOutline } from "react-icons/io5";
 import styled from "styled-components";
@@ -135,6 +136,25 @@ const TextArea = styled.textarea`
   font-family: var(--fonte);
 `;
 
+const BotaoEstilizado = styled.button`
+  background-color: #2f7fff;
+  margin-top: 1rem;
+  padding: 12px 35px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  color: #fffffff5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  border: 1px solid #add8e6;
+  width: 100%;
+  cursor: pointer;
+  &:hover {
+    background-color: var(--corHoverIconesBotoes);
+  }
+`;
+
 const Contato = () => {
   const icones = [IoLocationOutline, BsTelephone, HiOutlineEnvelope];
   const titulos = ["Endereço", "Telefone", "E-mail"];
@@ -179,6 +199,9 @@ const Contato = () => {
           </ContainerInputsBlocoMensagem>
           <Label>Mensagem</Label>
           <TextArea placeholder="Escreva sua mensagem aqui..." />
+          <BotaoEstilizado>
+            <FaRegPaperPlane /> Enviar mensagem
+          </BotaoEstilizado>
         </BlocoEnviarMensagem>
         <BlocoInfosContato>
           {icones.map((Icone, index) => (
