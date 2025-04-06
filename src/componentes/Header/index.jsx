@@ -51,7 +51,7 @@ const LiEstilizado = styled.li`
   }
 `;
 
-const LinkEstilizado = styled(Link)`
+const LinkComUnderline = styled(Link)`
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -71,6 +71,12 @@ const LinkEstilizado = styled(Link)`
   &:hover::after {
     width: 100%;
   }
+`;
+
+const LinkSemUnderline = styled(Link)`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 `;
 
 const BtnEstilizado = styled.button`
@@ -104,17 +110,17 @@ const Header = () => {
           <UlEstilizado>
             {icones.map((icone, index) => (
               <LiEstilizado key={index}>
-                <LinkEstilizado to={icone.caminho}>
+                <LinkComUnderline to={icone.caminho}>
                   {icone.icone}
                   <p>{icone.texto}</p>
-                </LinkEstilizado>
+                </LinkComUnderline>
               </LiEstilizado>
             ))}
           </UlEstilizado>
         </ContainterBotoesHeader>
-        <LinkEstilizado to="contato">
+        <LinkSemUnderline to="contato">
           <BtnEstilizado>Quero adotar</BtnEstilizado>
-        </LinkEstilizado>
+        </LinkSemUnderline>
       </ContainerIconesEBotao>
     </HeaderEstilizado>
   );
