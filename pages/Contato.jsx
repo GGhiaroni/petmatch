@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { BsTelephone } from "react-icons/bs";
 import { FaRegPaperPlane } from "react-icons/fa6";
 import { HiOutlineEnvelope } from "react-icons/hi2";
@@ -157,17 +158,26 @@ const BotaoEstilizado = styled.button`
 
 const Contato = () => {
   const icones = [IoLocationOutline, BsTelephone, HiOutlineEnvelope];
+
   const titulos = ["Endereço", "Telefone", "E-mail"];
+
   const descricaoUm = [
     "Rua dos Animais, 123",
     "(41) 1234-5678",
     "contato@petmatch.com",
   ];
+
   const descricaoDois = [
     "Água Verde - Curitiba - PR",
     "Segunda a sexta, 09h às 18h",
     "Respondemos em até 24h",
   ];
+
+  const [nome, setNome] = useState("");
+  const [email, setEmail] = useState("");
+  const [telefone, setTelefone] = useState("");
+  const [assunto, setAssunto] = useState("");
+  const [mensagem, setMensagem] = useState("");
 
   return (
     <ContainerPrincipal>
@@ -182,23 +192,47 @@ const Contato = () => {
           <ContainerInputsBlocoMensagem>
             <InputGroup>
               <Label>Nome completo</Label>
-              <Input placeholder="Seu nome completo" />
+              <Input
+                type="text"
+                placeholder="Seu nome completo"
+                value={nome}
+                onChange={(e) => setNome(e.target.value)}
+              />
             </InputGroup>
             <InputGroup>
               <Label>E-mail</Label>
-              <Input placeholder="seu@email.com" />
+              <Input
+                type="email"
+                placeholder="seu@email.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </InputGroup>
             <InputGroup>
               <Label>Telefone</Label>
-              <Input placeholder="(00) 00000-0000" />
+              <Input
+                type="telefone "
+                placeholder="(00) 00000-0000"
+                value={telefone}
+                onChange={(e) => setTelefone(e.target.value)}
+              />
             </InputGroup>
             <InputGroup>
               <Label>Assunto</Label>
-              <Input placeholder="Quero adotar um aumigo" />
+              <Input
+                type="text"
+                placeholder="Quero adotar um aumigo"
+                value={assunto}
+                onChange={(e) => setAssunto(e.target.value)}
+              />
             </InputGroup>
           </ContainerInputsBlocoMensagem>
           <Label>Mensagem</Label>
-          <TextArea placeholder="Escreva sua mensagem aqui..." />
+          <TextArea
+            placeholder="Escreva sua mensagem aqui..."
+            value={mensagem}
+            onChange={(e) => setMensagem(e.target.value)}
+          />
           <BotaoEstilizado>
             <FaRegPaperPlane /> Enviar mensagem
           </BotaoEstilizado>
