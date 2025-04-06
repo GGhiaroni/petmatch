@@ -10,9 +10,17 @@ const BotaoEstilizado = styled.button`
   align-items: center;
   gap: 15px;
   border: 1px solid #add8e6;
+  transition: background-color 0.3s ease-in-out;
+
+  svg {
+    transition: transform 0.3s ease-in-out;
+  }
 
   &:hover {
     background-color: var(--corHoverIconesBotoes);
+    svg {
+      transform: translateX(5px);
+    }
   }
 `;
 
