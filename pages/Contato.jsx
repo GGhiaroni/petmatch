@@ -5,6 +5,7 @@ import { HiOutlineEnvelope } from "react-icons/hi2";
 import { IoLocationOutline } from "react-icons/io5";
 import { toast } from "react-toastify";
 import styled from "styled-components";
+import { formatarTelefone } from "../src/utils/formatarTelefone";
 
 const ContainerPrincipal = styled.div`
   background: #ffffff;
@@ -229,7 +230,10 @@ const Contato = () => {
                 type="telefone "
                 placeholder="(00) 00000-0000"
                 value={telefone}
-                onChange={(e) => setTelefone(e.target.value)}
+                onChange={(e) => {
+                  const telefoneFormatado = formatarTelefone(e.target.value);
+                  setTelefone(telefoneFormatado);
+                }}
               />
             </InputGroup>
             <InputGroup>
