@@ -1,9 +1,8 @@
+import { AiOutlineHome } from "react-icons/ai";
+import { CiHeart, CiSearch } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Logomarca from "../Logomarca";
-import favoritos from "/src/assets/icone-coracao.png";
-import home from "/src/assets/icone-home.png";
-import lupa from "/src/assets/icone-lupa.png";
 
 const HeaderEstilizado = styled.header`
   background-color: #ffffff;
@@ -37,7 +36,6 @@ const LiEstilizado = styled.li`
   display: flex;
   align-items: center;
   svg {
-    max-width: 18px;
     color: var(--corTexto);
   }
 
@@ -46,7 +44,7 @@ const LiEstilizado = styled.li`
   }
 
   &:hover {
-    img,
+    svg,
     p {
       color: var(--corIconesBotoes);
     }
@@ -74,12 +72,12 @@ const BtnEstilizado = styled.button`
 const Header = () => {
   const icones = [
     {
-      src: home,
+      icone: <AiOutlineHome size={20} />,
       caminho: "/",
       texto: "Início",
     },
-    { src: lupa, caminho: "encontrar", texto: "Encontrar" },
-    { src: favoritos, caminho: "favoritos", texto: "Favoritos" },
+    { icone: <CiSearch size={20} />, caminho: "encontrar", texto: "Encontrar" },
+    { icone: <CiHeart size={20} />, caminho: "favoritos", texto: "Favoritos" },
   ];
 
   return (
@@ -91,7 +89,7 @@ const Header = () => {
             {icones.map((icone, index) => (
               <LiEstilizado key={index}>
                 <LinkEstilizado to={icone.caminho}>
-                  <img src={icone.src} />
+                  {icone.icone}
                   <p>{icone.texto}</p>
                 </LinkEstilizado>
               </LiEstilizado>
