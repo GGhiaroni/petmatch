@@ -13,6 +13,10 @@ const ContainerPrincipal = styled.div`
   width: 100%;
   overflow-x: hidden;
   padding: 8rem 2rem;
+
+  @media (max-width: 768px) {
+    padding: 6rem 1rem;
+  }
 `;
 
 const TextoPrincipal = styled.h1`
@@ -20,18 +24,40 @@ const TextoPrincipal = styled.h1`
   text-align: center;
   color: var(--corTextoPrincipal);
   margin-bottom: 2rem;
+
+  @media (max-width: 480px) {
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
 `;
 
 const ContainerBlocos = styled.div`
   display: flex;
   justify-content: center;
   gap: 10px;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const BlocoEnviarMensagem = styled.div`
   border: 1px solid #d4d8de;
-  padding: 2rem 2rem;
+  padding: 2rem;
   border-radius: 15px;
+  width: 100%;
+  max-width: 700px;
+  box-sizing: border-box;
+  background-color: #fff;
+
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 1rem;
+  }
 `;
 
 const BlocoInfosContato = styled.div`
@@ -69,6 +95,10 @@ const BlocoIconeInfoContato = styled.div`
       color: #ffffff;
     }
   }
+
+  @media (max-width: 480px) {
+    padding: 1.5rem;
+  }
 `;
 
 const Informacoes = styled.div`
@@ -79,23 +109,39 @@ const Informacoes = styled.div`
 const TituloInformacoes = styled.h4`
   font-size: 1.2rem;
   font-weight: 500;
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
 `;
 
 const TextoInformacoes = styled.p`
   font-size: 0.9rem;
   color: var(--corTexto);
   font-weight: 300;
+
+  @media (max-width: 480px) {
+    font-size: 0.85rem;
+  }
 `;
 
 const TituloBlocoMensagem = styled.h4`
   font-size: 1.8rem;
   color: var(--corTextoPrincipal);
+
+  @media (max-width: 480px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const DescricaoBlocoMensagem = styled.p`
   font-size: 1rem;
   color: var(--corTexto);
   font-weight: 300;
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
 `;
 
 const ContainerInputsBlocoMensagem = styled.div`
@@ -103,8 +149,12 @@ const ContainerInputsBlocoMensagem = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem 2rem;
-  width: 700px;
   margin-bottom: 1.5rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 `;
 
 const InputGroup = styled.div`
@@ -115,6 +165,10 @@ const InputGroup = styled.div`
 const Label = styled.label`
   font-size: 1rem;
   margin-bottom: 5px;
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
 `;
 
 const Input = styled.input`
@@ -123,6 +177,10 @@ const Input = styled.input`
   border-radius: 10px;
   border: 1px solid #d4d8de;
   font-weight: 300;
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
 `;
 
 const TextArea = styled.textarea`
@@ -137,6 +195,10 @@ const TextArea = styled.textarea`
   font-size: 1rem;
   color: var(--corTextoPrincipal);
   font-family: var(--fonte);
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
 `;
 
 const BotaoEstilizado = styled.button`
@@ -155,6 +217,11 @@ const BotaoEstilizado = styled.button`
   cursor: pointer;
   &:hover {
     background-color: var(--corHoverIconesBotoes);
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.85rem;
+    padding: 10px 20px;
   }
 `;
 
