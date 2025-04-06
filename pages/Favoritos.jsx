@@ -15,26 +15,44 @@ const TextoPrincipal = styled.h1`
   font-size: 2.5rem;
   text-align: center;
   color: var(--corTextoPrincipal);
+
+  @media (max-width: 480px) {
+    font-size: 2rem;
+  }
 `;
 
 const ContainerCardsCachorros = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, minmax(200px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: ${(props) => (props.$isPoucosItens ? "0px" : "20px")};
   padding: 30px;
   margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+
+  @media (max-width: 480px) {
+    padding: 20px 10px;
+  }
 `;
 
 const CardCachorro = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
   border-radius: 15px;
   border: 1px solid #d4d8de;
   width: 100%;
   overflow: hidden;
+  max-width: 360px;
+  margin: 0 auto;
+  overflow: hidden;
   padding-bottom: 20px;
+
+  @media (max-width: 480px) {
+    max-width: 100%;
+    padding-bottom: 15px;
+  }
 `;
 
 const ContainerImagem = styled.div`
@@ -49,9 +67,10 @@ const ImgCachorro = styled.img`
   object-fit: cover;
   border-radius: 15px 15px 0 0;
   cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+
   &:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease-in-out;
+    transform: scale(1.05);
   }
 `;
 
@@ -65,16 +84,24 @@ const TextoCardCachorro = styled.div`
 const NomeCachorro = styled.h4`
   font-size: 1.6rem;
   margin-bottom: 5px;
+
+  @media (max-width: 480px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const DadosCachorro = styled.span`
   font-size: 1rem;
   color: #6b7280;
+
+  @media (max-width: 480px) {
+    font-size: 0.8rem;
+  }
 `;
 
 const BotaoEstilizado = styled.button`
   background-color: #2f7fff;
-  padding: 12px 35px;
+  padding: 12px 20px;
   border-radius: 15px;
   font-size: 0.9rem;
   color: #fffffff5;
@@ -83,10 +110,22 @@ const BotaoEstilizado = styled.button`
   justify-content: center;
   gap: 15px;
   border: 1px solid #add8e6;
-  width: 380px;
+  width: 100%;
+  margin: 0 auto;
   cursor: pointer;
+
   &:hover {
     background-color: var(--corHoverIconesBotoes);
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.85rem;
+    padding: 10px 30px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 1rem;
+    padding: 12px 100px;
   }
 `;
 
@@ -123,7 +162,7 @@ const Favoritos = () => {
   return (
     <ContainerPrincipal>
       <TextoPrincipal>Meus favoritos</TextoPrincipal>
-      <ContainerCardsCachorros>
+      <ContainerCardsCachorros $isPoucosItens={favoritos.length <= 2}>
         {favoritos.map((cachorro, index) => (
           <CardCachorro>
             <ContainerImagem>
