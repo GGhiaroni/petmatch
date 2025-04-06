@@ -3,6 +3,7 @@ import { BsTelephone } from "react-icons/bs";
 import { FaRegPaperPlane } from "react-icons/fa6";
 import { HiOutlineEnvelope } from "react-icons/hi2";
 import { IoLocationOutline } from "react-icons/io5";
+import { toast } from "react-toastify";
 import styled from "styled-components";
 
 const ContainerPrincipal = styled.div`
@@ -183,6 +184,13 @@ const Contato = () => {
     if (!nome || !email || !telefone || !assunto || !mensagem) {
       toast.error("Por favor, preencha todos os campos! ⚠️");
       return;
+    } else {
+      toast.success("Mensagem enviada! 🐶 💙");
+      setNome("");
+      setEmail("");
+      setTelefone("");
+      setAssunto("");
+      setMensagem("");
     }
   };
 

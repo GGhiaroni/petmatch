@@ -1,4 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Contato from "../pages/Contato";
 import Favoritos from "../pages/Favoritos";
 import Home from "../pages/Home";
@@ -9,6 +11,7 @@ import Header from "./componentes/Header";
 function AppRoutes() {
   return (
     <BrowserRouter>
+      <ToastContainer position="top-right" autoClose={5000} />
       <Header />
       <Routes>
         <Route index element={<Home />} />
