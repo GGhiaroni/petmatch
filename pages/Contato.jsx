@@ -179,6 +179,13 @@ const Contato = () => {
   const [assunto, setAssunto] = useState("");
   const [mensagem, setMensagem] = useState("");
 
+  const handleEnviarMensagem = () => {
+    if (!nome || !email || !telefone || !assunto || !mensagem) {
+      toast.error("Por favor, preencha todos os campos! ⚠️");
+      return;
+    }
+  };
+
   return (
     <ContainerPrincipal>
       <TextoPrincipal>Entre em contato</TextoPrincipal>
@@ -233,7 +240,7 @@ const Contato = () => {
             value={mensagem}
             onChange={(e) => setMensagem(e.target.value)}
           />
-          <BotaoEstilizado>
+          <BotaoEstilizado onClick={handleEnviarMensagem}>
             <FaRegPaperPlane /> Enviar mensagem
           </BotaoEstilizado>
         </BlocoEnviarMensagem>
