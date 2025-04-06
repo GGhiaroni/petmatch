@@ -36,12 +36,20 @@ const UlEstilizado = styled.ul`
 const LiEstilizado = styled.li`
   display: flex;
   align-items: center;
-  img {
+  svg {
     max-width: 18px;
+    color: var(--corTexto);
   }
 
   p {
     color: var(--corTexto);
+  }
+
+  &:hover {
+    img,
+    p {
+      color: var(--corIconesBotoes);
+    }
   }
 `;
 
