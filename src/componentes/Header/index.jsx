@@ -55,6 +55,22 @@ const LinkEstilizado = styled(Link)`
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--corIconesBotoes);
+    transition: width 0.3s ease-in-out;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
 `;
 
 const BtnEstilizado = styled.button`
