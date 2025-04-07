@@ -104,7 +104,7 @@ const MenuHamburguerBtn = styled.button`
   border: none;
   font-size: 2rem;
   color: var(--corTexto);
-  transition: transform 0.4s ease;
+  transition: transform 0.2s ease;
 
   ${({ girar }) => girar && `transform: rotate(180deg);`}
 
