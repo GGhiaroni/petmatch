@@ -168,6 +168,35 @@ const LinkImagem = styled(Link)`
 const PaginaEncontrar = () => {
   const [cachorros, setCachorros] = useState([]);
 
+  const [busca, setBusca] = useState("");
+
+  const [buscaDebounce, setBuscaDebounce] = useState("");
+
+  useEffect(() => {
+    const delay = setTimeout(() => {
+      setBuscaDebounce(busca);
+    }, 300);
+
+    return () => clearTimeout(delay);
+  }, [busca]);
+
+  const padronizarTextoBuscaInput = (texto) => {
+    if (!texto || typeof texto !== "string") return "";
+    return texto
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase();
+  };
+
+  const cachorrosFiltradosPeloInput = cachorros.filter((cachorro) => {
+    const buscaNormalizada = padronizarTextoBuscaInput(buscaDebounce);
+    return (
+      padronizarTextoBuscaInput(cachorro.nome).includes(buscaNormalizada) ||
+      padronizarTextoBuscaInput(cachorro.raca).includes(buscaNormalizada) ||
+      padronizarTextoBuscaInput(cachorro.porte).includes(buscaNormalizada)
+    );
+  });
+
   useEffect(() => {
     const misturarArray = (array) => {
       let novoArray = [...array];
@@ -188,8 +217,9 @@ const PaginaEncontrar = () => {
           <CiSearch size={20} />
           <InputEstilizado
             type="text"
-            placeholder="Buscar por raça ou porte..."
-            color=""
+            placeholder="Buscar por nome, raça ou porte..."
+            value={busca}
+            onChange={(e) => setBusca(e.target.value)}
           />
         </ContainerInput>
         <ButtonIcone>
@@ -197,8 +227,8 @@ const PaginaEncontrar = () => {
         </ButtonIcone>
       </ContainerTopo>
       <ContainerCardsCachorros>
-        {cachorros.map((cachorro, index) => (
-          <CardCachorro>
+        {cachorrosFiltradosPeloInput.map((cachorro, index) => (
+          <CardCachorro key={index}>
             <LinkImagem
               to={`/cachorros/porte-${cachorro.porte
                 .toLowerCase()
