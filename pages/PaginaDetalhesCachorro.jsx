@@ -226,6 +226,10 @@ const PaginaDetalhesCachorro = () => {
 
   const selecionarFoto = (id) => {
     setFotoSelecionada(id);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   return (
