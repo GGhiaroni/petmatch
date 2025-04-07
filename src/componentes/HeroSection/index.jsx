@@ -38,6 +38,7 @@ const H1Estilizado = styled.h1`
   @media (max-width: 480px) {
     font-size: 2.2rem;
     line-height: normal;
+    margin-top: 0rem;
   }
 `;
 
