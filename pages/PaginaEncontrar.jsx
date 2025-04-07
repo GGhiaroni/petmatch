@@ -160,6 +160,11 @@ const BotaoEstilizado = styled.button`
   }
 `;
 
+const LinkImagem = styled(Link)`
+  width: 100%;
+  display: block;
+`;
+
 const PaginaEncontrar = () => {
   const [cachorros, setCachorros] = useState([]);
 
@@ -194,11 +199,17 @@ const PaginaEncontrar = () => {
       <ContainerCardsCachorros>
         {cachorros.map((cachorro, index) => (
           <CardCachorro>
-            <ImgCachorro
-              src={cachorro.foto}
-              key={index}
-              alt={`Cachorro ${cachorro.nome}`}
-            />
+            <LinkImagem
+              to={`/cachorros/porte-${cachorro.porte
+                .toLowerCase()
+                .replace("é", "e")}/${cachorro.id}`}
+            >
+              <ImgCachorro
+                src={cachorro.foto}
+                key={index}
+                alt={`Cachorro ${cachorro.nome}`}
+              />
+            </LinkImagem>
             <TextoCardCachorro>
               <NomeCachorro>{cachorro.nome}</NomeCachorro>
               <DadosCachorro>Raça: {cachorro.raca}</DadosCachorro>
