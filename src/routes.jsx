@@ -6,6 +6,7 @@ import Favoritos from "../pages/Favoritos";
 import Home from "../pages/Home";
 import PaginaDetalhesCachorro from "../pages/PaginaDetalhesCachorro";
 import PaginaEncontrar from "../pages/PaginaEncontrar";
+import Footer from "./componentes/Footer";
 import Header from "./componentes/Header";
 
 function AppRoutes() {
@@ -23,6 +24,7 @@ function AppRoutes() {
         <Route path="favoritos" element={<Favoritos />} />
         <Route path="contato" element={<Contato />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

@@ -5,10 +5,10 @@ import useFavoritosStore from "../src/store/useFavoritosStore";
 
 const ContainerPrincipal = styled.div`
   background: #ffffff;
-  min-height: 100vh;
   width: 100%;
+  min-height: 100vh;
   overflow-x: hidden;
-  padding: 8rem 2rem;
+  padding: 8rem 2rem 2rem;
 `;
 
 const TextoPrincipal = styled.h1`

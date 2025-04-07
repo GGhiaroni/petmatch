@@ -12,7 +12,7 @@ const ContainerPrincipal = styled.div`
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
-  padding: 8rem 2rem;
+  padding: 8rem 2rem 2rem;
 `;
 
 const H3Estilizado = styled.h3`
