@@ -23,6 +23,16 @@ const ContainerTopo = styled.div`
   justify-content: center;
   align-items: center;
   gap: 2.5rem;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
+    justify-content: center;
+  }
 `;
 
 const ContainerInput = styled.div`
@@ -34,6 +44,14 @@ const ContainerInput = styled.div`
   padding: 10px 15px;
   width: 500px;
   border: 1px solid #d4d8de;
+
+  @media (max-width: 768px) {
+    width: 70%;
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+  }
 `;
 
 const InputEstilizado = styled.input`
@@ -62,6 +80,15 @@ const ContainerCardsCachorros = styled.div`
   gap: 20px;
   padding: 30px;
   margin-top: 20px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
 `;
 
 const CardCachorro = styled.div`
@@ -120,6 +147,10 @@ const BotaoEstilizado = styled.button`
   cursor: pointer;
   &:hover {
     background-color: var(--corHoverIconesBotoes);
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
   }
 `;
 
