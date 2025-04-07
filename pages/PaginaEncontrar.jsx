@@ -315,38 +315,51 @@ const PaginaEncontrar = () => {
       </ContainerTopo>
 
       <ContainerCardsCachorros>
-        {cachorrosFiltradosPeloInput.map((cachorro, index) => (
-          <CardCachorro key={index}>
-            <LinkImagem
-              to={`/cachorros/porte-${cachorro.porte
-                .toLowerCase()
-                .replace("é", "e")}/${cachorro.id}`}
-            >
-              <ImgCachorro
-                src={cachorro.foto}
-                alt={`Cachorro ${cachorro.nome}`}
-              />
-            </LinkImagem>
-            <TextoCardCachorro>
-              <NomeCachorro>{cachorro.nome}</NomeCachorro>
-              <DadosCachorro>Raça: {cachorro.raca}</DadosCachorro>
-              <DadosCachorro>
-                Idade:{" "}
-                {Number(cachorro.idade) === 1
-                  ? `${cachorro.idade} ano`
-                  : `${cachorro.idade} anos`}
-              </DadosCachorro>
-              <DadosCachorro>Porte: {cachorro.porte}</DadosCachorro>
-            </TextoCardCachorro>
-            <Link
-              to={`/cachorros/porte-${cachorro.porte
-                .toLowerCase()
-                .replace("é", "e")}/${cachorro.id}`}
-            >
-              <BotaoEstilizado>Ver detalhes</BotaoEstilizado>
-            </Link>
-          </CardCachorro>
-        ))}
+        {cachorrosFiltradosPeloInput.length === 0 ? (
+          <p
+            style={{
+              gridColumn: "1 / -1",
+              textAlign: "center",
+              fontSize: "1.2rem",
+              color: "#6b7280",
+            }}
+          >
+            Nenhum resultado encontrado.
+          </p>
+        ) : (
+          cachorrosFiltradosPeloInput.map((cachorro, index) => (
+            <CardCachorro key={index}>
+              <LinkImagem
+                to={`/cachorros/porte-${cachorro.porte
+                  .toLowerCase()
+                  .replace("é", "e")}/${cachorro.id}`}
+              >
+                <ImgCachorro
+                  src={cachorro.foto}
+                  alt={`Cachorro ${cachorro.nome}`}
+                />
+              </LinkImagem>
+              <TextoCardCachorro>
+                <NomeCachorro>{cachorro.nome}</NomeCachorro>
+                <DadosCachorro>Raça: {cachorro.raca}</DadosCachorro>
+                <DadosCachorro>
+                  Idade:{" "}
+                  {Number(cachorro.idade) === 1
+                    ? `${cachorro.idade} ano`
+                    : `${cachorro.idade} anos`}
+                </DadosCachorro>
+                <DadosCachorro>Porte: {cachorro.porte}</DadosCachorro>
+              </TextoCardCachorro>
+              <Link
+                to={`/cachorros/porte-${cachorro.porte
+                  .toLowerCase()
+                  .replace("é", "e")}/${cachorro.id}`}
+              >
+                <BotaoEstilizado>Ver detalhes</BotaoEstilizado>
+              </Link>
+            </CardCachorro>
+          ))
+        )}
       </ContainerCardsCachorros>
     </ContainerPrincipal>
   );
