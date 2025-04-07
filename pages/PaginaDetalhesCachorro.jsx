@@ -51,6 +51,12 @@ const Img = styled.img`
 const InformacoesCachorro = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
 `;
 
 const NomeEBotaoFavorito = styled.div`
@@ -61,9 +67,10 @@ const NomeEBotaoFavorito = styled.div`
   gap: 2rem;
 
   @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    justify-content: center;
   }
 `;
 
@@ -98,8 +105,12 @@ const ContainerInfosDestaque = styled.div`
   flex-wrap: wrap;
 
   @media (max-width: 768px) {
-    gap: 1rem;
-    justify-content: flex-start;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    text-align: center;
   }
 `;
 
@@ -107,6 +118,7 @@ const ContainerIcone = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 2rem 4rem;
   border-radius: 10px;
   border: 1px solid #e0e4e8;
@@ -140,6 +152,11 @@ const InfoTitulo = styled.h2`
   gap: 5px;
   font-size: 1.6rem;
   color: var(--corTextoPrincipal);
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
 `;
 
 const SobreTexto = styled.h4`
@@ -175,6 +192,7 @@ const ContainerInferiorImagens = styled.div`
 
   @media (max-width: 768px) {
     justify-content: center;
+    margin-top: 3rem;
   }
 `;
 
