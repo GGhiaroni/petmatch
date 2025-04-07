@@ -165,18 +165,76 @@ const LinkImagem = styled(Link)`
   display: block;
 `;
 
+const DropdownContainer = styled.div`
+  position: relative;
+  display: inline-block;
+`;
+
+const DropdownButton = styled.button`
+  padding: 10px 15px;
+  font-size: 1rem;
+  background: white;
+  border: 1px solid #d4d8de;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &:hover {
+    background-color: #f2f2f2;
+  }
+
+  .texto-botao {
+    @media (max-width: 480px) {
+      display: none;
+    }
+  }
+`;
+
+const DropdownContent = styled.div`
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #d4d8de;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 5;
+  width: 180px;
+
+  @media (max-width: 480px) {
+    right: -10px;
+  }
+`;
+
+const DropdownItem = styled.div`
+  padding: 10px 15px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f2f2f2;
+  }
+
+  ${({ isActive }) =>
+    isActive &&
+    `
+    background-color: #2f7fff;
+    color: white;
+  `}
+`;
+
 const PaginaEncontrar = () => {
   const [cachorros, setCachorros] = useState([]);
-
   const [busca, setBusca] = useState("");
-
   const [buscaDebounce, setBuscaDebounce] = useState("");
+  const [mostrarFiltro, setMostrarFiltro] = useState(false);
+  const [porteSelecionado, setPorteSelecionado] = useState("");
 
   useEffect(() => {
     const delay = setTimeout(() => {
       setBuscaDebounce(busca);
     }, 300);
-
     return () => clearTimeout(delay);
   }, [busca]);
 
@@ -190,12 +248,21 @@ const PaginaEncontrar = () => {
 
   const cachorrosFiltradosPeloInput = cachorros.filter((cachorro) => {
     const buscaNormalizada = padronizarTextoBuscaInput(buscaDebounce);
-    return (
+    const correspondeAoInput =
       padronizarTextoBuscaInput(cachorro.nome).includes(buscaNormalizada) ||
       padronizarTextoBuscaInput(cachorro.raca).includes(buscaNormalizada) ||
-      padronizarTextoBuscaInput(cachorro.porte).includes(buscaNormalizada)
-    );
+      padronizarTextoBuscaInput(cachorro.porte).includes(buscaNormalizada);
+
+    const correspondeAoFiltro =
+      porteSelecionado === "" || cachorro.porte === porteSelecionado;
+
+    return correspondeAoInput && correspondeAoFiltro;
   });
+
+  const handleSelecionarPorte = (valor) => {
+    setPorteSelecionado(valor);
+    setMostrarFiltro(false);
+  };
 
   useEffect(() => {
     const misturarArray = (array) => {
@@ -222,10 +289,31 @@ const PaginaEncontrar = () => {
             onChange={(e) => setBusca(e.target.value)}
           />
         </ContainerInput>
-        <ButtonIcone>
-          <CiFilter size={20} />
-        </ButtonIcone>
+
+        <DropdownContainer>
+          <DropdownButton onClick={() => setMostrarFiltro(!mostrarFiltro)}>
+            <CiFilter size={20} />
+            <span className="texto-botao">
+              {porteSelecionado ? porteSelecionado : "Filtrar por porte"}
+            </span>
+          </DropdownButton>
+
+          {mostrarFiltro && (
+            <DropdownContent>
+              {["", "Pequeno", "Médio", "Grande"].map((porte) => (
+                <DropdownItem
+                  key={porte}
+                  isActive={porteSelecionado === porte}
+                  onClick={() => handleSelecionarPorte(porte)}
+                >
+                  {porte === "" ? "Todos" : porte}
+                </DropdownItem>
+              ))}
+            </DropdownContent>
+          )}
+        </DropdownContainer>
       </ContainerTopo>
+
       <ContainerCardsCachorros>
         {cachorrosFiltradosPeloInput.map((cachorro, index) => (
           <CardCachorro key={index}>
@@ -236,7 +324,6 @@ const PaginaEncontrar = () => {
             >
               <ImgCachorro
                 src={cachorro.foto}
-                key={index}
                 alt={`Cachorro ${cachorro.nome}`}
               />
             </LinkImagem>
