@@ -29,12 +29,23 @@ const ContainerFotoInformacoes = styled.div`
   margin-top: 2rem;
   display: flex;
   gap: 2.5rem;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const Img = styled.img`
   height: 500px;
   width: 620px;
   border-radius: 15px;
+  object-fit: cover;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto;
+  }
 `;
 
 const InformacoesCachorro = styled.div`
@@ -47,7 +58,13 @@ const NomeEBotaoFavorito = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  gap: 30rem;
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
 `;
 
 const NomeERacaCachorro = styled.div`
@@ -74,11 +91,16 @@ const BtnFavorito = styled.button`
 `;
 
 const ContainerInfosDestaque = styled.div`
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin: 3rem 0;
   display: flex;
   gap: 2rem;
   justify-content: center;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    gap: 1rem;
+    justify-content: flex-start;
+  }
 `;
 
 const ContainerIcone = styled.div`
@@ -90,6 +112,12 @@ const ContainerIcone = styled.div`
   border: 1px solid #e0e4e8;
   gap: 1px;
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.05);
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+    width: 80%;
+    align-items: center;
+  }
 `;
 
 const TituloIcone = styled.span`
@@ -143,6 +171,11 @@ const ContainerInferiorImagens = styled.div`
   display: flex;
   gap: 10px;
   margin-top: 1rem;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 const ImgContainerInferior = styled.img`
@@ -150,6 +183,12 @@ const ImgContainerInferior = styled.img`
   height: 100px;
   width: 120px;
   cursor: pointer;
+  object-fit: cover;
+
+  @media (max-width: 768px) {
+    width: 90px;
+    height: 80px;
+  }
 `;
 
 const ImgContainerInferiorSelecionada = styled.img`
