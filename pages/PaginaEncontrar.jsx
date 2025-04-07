@@ -15,6 +15,12 @@ const TextoPrincipal = styled.h1`
   font-size: 2.5rem;
   text-align: center;
   padding-top: 9rem;
+
+  @media (max-width: 480px) {
+    font-size: 2rem;
+    padding-top: 7rem;
+    padding-bottom: 1rem;
+  }
 `;
 
 const ContainerTopo = styled.div`
