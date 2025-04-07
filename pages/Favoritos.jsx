@@ -157,14 +157,12 @@ const Favoritos = () => {
     removerFavorito(id);
   };
 
-  console.log(favoritos);
-
   return (
     <ContainerPrincipal>
       <TextoPrincipal>Meus favoritos</TextoPrincipal>
       <ContainerCardsCachorros $isPoucosItens={favoritos.length <= 2}>
         {favoritos.map((cachorro, index) => (
-          <CardCachorro>
+          <CardCachorro key={index}>
             <ContainerImagem>
               <BtnRemoverFavoritos
                 onClick={() => removerDosFavoritos(cachorro.id)}

@@ -1,5 +1,8 @@
+import { useState } from "react";
 import { AiOutlineHome } from "react-icons/ai";
 import { CiHeart, CiSearch } from "react-icons/ci";
+import { IoIosMenu } from "react-icons/io";
+import { IoClose } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Logomarca from "../Logomarca";
@@ -25,6 +28,10 @@ const ContainterBotoesHeader = styled.div`
 const ContainerIconesEBotao = styled.div`
   display: flex;
   gap: 2rem;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const UlEstilizado = styled.ul`
@@ -91,7 +98,67 @@ const BtnEstilizado = styled.button`
   }
 `;
 
+const MenuHamburguerBtn = styled.button`
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--corTexto);
+  transition: transform 0.4s ease;
+
+  ${({ girar }) => girar && `transform: rotate(180deg);`}
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
+
+const MenuMobile = styled.div`
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: #ffffff;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  z-index: 1100;
+  animation: slideIn 0.3s ease forwards;
+
+  @keyframes slideIn {
+    from {
+      right: -300px;
+    }
+    to {
+      right: 0;
+    }
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.2rem;
+    color: var(--corTexto);
+    text-decoration: none;
+  }
+`;
+
+const FecharMenuBtn = styled.button`
+  align-self: flex-end;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--corTexto);
+  cursor: pointer;
+`;
+
 const Header = () => {
+  const [menuAberto, setMenuAberto] = useState(false);
+
   const icones = [
     {
       icone: <AiOutlineHome size={20} />,
@@ -103,26 +170,56 @@ const Header = () => {
   ];
 
   return (
-    <HeaderEstilizado>
-      <Logomarca />
-      <ContainerIconesEBotao>
-        <ContainterBotoesHeader>
-          <UlEstilizado>
-            {icones.map((icone, index) => (
-              <LiEstilizado key={index}>
-                <LinkComUnderline to={icone.caminho}>
-                  {icone.icone}
-                  <p>{icone.texto}</p>
-                </LinkComUnderline>
-              </LiEstilizado>
-            ))}
-          </UlEstilizado>
-        </ContainterBotoesHeader>
-        <LinkSemUnderline to="contato">
-          <BtnEstilizado>Quero adotar</BtnEstilizado>
-        </LinkSemUnderline>
-      </ContainerIconesEBotao>
-    </HeaderEstilizado>
+    <>
+      <HeaderEstilizado>
+        <Logomarca />
+        <ContainerIconesEBotao>
+          <ContainterBotoesHeader>
+            <UlEstilizado>
+              {icones.map((icone, index) => (
+                <LiEstilizado key={index}>
+                  <LinkComUnderline to={icone.caminho}>
+                    {icone.icone}
+                    <p>{icone.texto}</p>
+                  </LinkComUnderline>
+                </LiEstilizado>
+              ))}
+            </UlEstilizado>
+          </ContainterBotoesHeader>
+          <LinkSemUnderline to="contato">
+            <BtnEstilizado>Quero adotar</BtnEstilizado>
+          </LinkSemUnderline>
+        </ContainerIconesEBotao>
+        <MenuHamburguerBtn
+          girar={menuAberto}
+          onClick={() => setMenuAberto(!menuAberto)}
+        >
+          {menuAberto ? <IoClose key="close" /> : <IoIosMenu key="menu" />}
+        </MenuHamburguerBtn>
+      </HeaderEstilizado>
+      {menuAberto && (
+        <MenuMobile>
+          <FecharMenuBtn onClick={() => setMenuAberto(false)}>
+            <IoClose />
+          </FecharMenuBtn>
+          {icones.map((icone, index) => (
+            <Link
+              key={index}
+              to={icone.caminho}
+              onClick={() => setMenuAberto(false)}
+            >
+              {icone.icone}
+              {icone.texto}
+            </Link>
+          ))}
+          <Link to="contato" onClick={() => setMenuAberto(false)}>
+            <BtnEstilizado style={{ width: "100%", justifyContent: "center" }}>
+              Quero adotar
+            </BtnEstilizado>
+          </Link>
+        </MenuMobile>
+      )}
+    </>
   );
 };
 
