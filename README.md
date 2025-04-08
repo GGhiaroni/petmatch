@@ -1,12 +1,51 @@
-# React + Vite
+# 🐶✨ PetMatch – Encontre seu novo melhor amigo!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**PetMatch** é uma plataforma web criada com ❤️ usando **React** e **JavaScript**, que conecta pessoas a cachorros disponíveis para adoção. Encontre, filtre, favorite e adote com facilidade – tudo com um design moderno e responsivo! ✨📱💻
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 Funcionalidades Principais
 
-## Expanding the ESLint configuration
+✅ **Busca inteligente** por **nome**, **raça** ou **porte**  
+🎚️ **Filtro interativo** por **porte** (Pequeno, Médio ou Grande)  
+⭐ **Adicionar/Remover Favoritos** com persistência no `localStorage`  
+📄 **Página de Favoritos** para visualizar seus pets salvos  
+📬 **Página de Contato** com layout 100% responsivo  
+🧠 **Gerenciamento de estado global** com Zustand  
+📦 **Dados mockados** via arquivo JSON (`dogs.json`)  
+🌐 **Design 100% responsivo** para **mobile**, **tablet**, **desktop** e **widescreen**  
+🖼️ **Página de detalhes** com informações completas de cada pet  
+🔔 **Notificações visuais** com React Toastify  
+💾 **Persistência local** de favoritos no navegador, através do localStorage
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧱 Tecnologias Utilizadas
+
+| Ferramenta               | Descrição |
+|--------------------------|-----------|
+| ⚛️ **React 19**          | Biblioteca principal para a construção da interface |
+| 🧭 **React Router DOM**  | Roteamento SPA entre as páginas |
+| 🎨 **Styled Components** | Estilização com CSS-in-JS e tema global |
+| 🌿 **Zustand**           | Gerenciamento leve de estado global |
+| 🍞 **React Toastify**    | Notificações elegantes para ações do usuário |
+| 🧰 **Vite**              | Bundler ultrarrápido para desenvolvimento moderno |
+| 🌐 **React Icons**       | Ícones modernos e otimizados |
+| ✅ **ESLint**            | Padronização de código com boas práticas |
+
+---
+
+## 📁 Estrutura do Projeto
+
+```bash
+petmatch/
+├── public/
+├── src/
+│   ├── assets/              # Imagens e ícones
+│   ├── components/          # Componentes reutilizáveis
+│   ├── db/dogs.json         # Base de dados dos cachorros
+│   ├── pages/               # Páginas como Encontrar, Favoritos, Contato
+│   ├── store/               # Zustand (favoritos, filtros)
+│   └── App.jsx              # Arquivo principal com as rotas
+├── package.json
+└── vite.config.js
