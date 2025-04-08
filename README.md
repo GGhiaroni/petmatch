@@ -1,6 +1,6 @@
 # 🐶✨ PetMatch – Encontre seu novo melhor amigo!
 
-**PetMatch** é uma plataforma web criada com ❤️ usando **React** e **JavaScript**, que conecta pessoas a cachorros disponíveis para adoção. Encontre, filtre, favorite e adote com facilidade – tudo com um design moderno e responsivo! ✨📱💻
+**PetMatch** é uma plataforma web criada com 💙 usando **React** e **JavaScript**, que conecta pessoas a cachorros disponíveis para adoção. Encontre, filtre, favorite e adote com facilidade – tudo com um design moderno e responsivo! ✨📱💻
 
 Acesse o projeto completo em: https://petmatch-lac.vercel.app/
 
@@ -9,8 +9,8 @@ Acesse o projeto completo em: https://petmatch-lac.vercel.app/
 ## 🌟 Funcionalidades Principais
 
 ✅ **Busca inteligente** por **nome**, **raça** ou **porte**  
-🎚️ **Filtro interativo** por **porte** (Pequeno, Médio ou Grande)  
-⭐ **Adicionar/Remover Favoritos** com persistência no `localStorage`  
+🔍 **Filtro interativo** por **porte** (Pequeno, Médio ou Grande)  
+❤️ **Adicionar/Remover Favoritos** com persistência no `localStorage`  
 📄 **Página de Favoritos** para visualizar seus pets salvos  
 📬 **Página de Contato** com layout 100% responsivo  
 🧠 **Gerenciamento de estado global** com Zustand  
